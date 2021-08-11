@@ -1,6 +1,7 @@
 
 import React from "react";
 import logo from "./img/Charrr.png";
+import Todo from './components/testing';
 import "./App.css";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <Testing/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>{!data ? "Loading..." : data}</p>
