@@ -1,4 +1,6 @@
 import React from "react";
+import logo from "./img/Charrr.png";
+import Todo from './components/testing';
 import "./App.css";
 import LandingRoom from "./components/landing-room/LandingRoom";
 
