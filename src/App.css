@@ -10,7 +10,44 @@ body  {
 .backgroundImage {
   height: 100vh;
   width: 100%;
- 
+}
+
+body {
+	background: lightblue;
+}
+
+.bubble {
+	height: 250px;
+	width: 40%;
+	min-width: 200px;
+	background: rgb(177, 177, 102);
+	display: block;
+	margin: 0 auto;
+	border-radius: 20px;
+	margin-top: 50px;
+	font-size: 40px;
+	text-align: center;
+}
+
+.pointer {
+	height: 40px;
+	width: 40px;
+	background:rgb(177, 177, 102);
+	margin: 0 auto;
+	transform: rotate(135deg);
+	border-radius: 0 0 12px 0;
+	margin-top: -225px;
+	position: relative;
+  right: calc(0.05vw - 210px);
+}
+
+.blurred {
+	background: gray;
+	filter: blur(20px);
+	position: relative;
+	top: -315px;
+/* 	transform: scale(1.05); */
+	z-index: -1;
 }
 
 /* .App-logo {
