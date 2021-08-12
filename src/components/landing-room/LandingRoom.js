@@ -17,11 +17,11 @@ class EndingText extends React.Component {
 
 const LandingRoom = () => {
   return (
-    <div className='LandingRoom'>
+    <div className='LandingRoom' data-testid='landingroom-1'>
       <p>Welcome to the Dino mystery!</p>
       <EndingText />
-      <div class="container">
-      <img src={RoomOneImage}  height="90%" width="80%" ></img>
+      <div className="container">
+      <img src={RoomOneImage} alt="Landing room"  height="90%" width="80%"  ></img>
     </div>
     </div>
   )
