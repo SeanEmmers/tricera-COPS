@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import LandingRoom from "./components/landing-room/LandingRoom";
-import RoomOne from "./components/room-one/RoomOne";
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -14,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <RoomOne />
+      <LandingRoom />
     </div>
   );
 }
