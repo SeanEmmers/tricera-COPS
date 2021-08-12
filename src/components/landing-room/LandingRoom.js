@@ -21,8 +21,8 @@ const LandingRoom = () => {
       <p>Welcome to the Dino mystery!</p>
       <EndingText />
       <div class="container">
-      <img src={RoomOneImage}  height="90%" width="80%" ></img>
-    </div>
+        <img class="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
+      </div>
     </div>
   )
 }
