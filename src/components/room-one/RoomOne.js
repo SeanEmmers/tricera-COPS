@@ -6,9 +6,12 @@ import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
 const RoomOne = () => {
   return (
     <div class="container">
-      <img src={RoomOneImage}  height="90%" width="80%" ></img>
+  
+      <img class=" backgroundImage" src={RoomOneImage} alt="TriceraCop" />
+
+      
     </div>
-  )
+  );
 }
 
 export default RoomOne;
