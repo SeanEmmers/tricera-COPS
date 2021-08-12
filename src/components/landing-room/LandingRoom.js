@@ -1,5 +1,8 @@
 import React from "react";
 import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
+import OrangeDoor from "./room-one-images/orange-door.png";
+import Popup from "./PopUp";
+import { useState } from 'react';
 
 class SpeechBubble extends React.Component {
   constructor(props) {
@@ -21,10 +24,26 @@ class SpeechBubble extends React.Component {
           Next...
         </button>
         </div>
-        <div class="pointer"></div>
+        <div className="pointer"></div>
       </div>
     )
   }
+}
+
+const Door = () => {
+  const [buttonPopUp, setButtonPopup] = useState(false);
+
+  return(
+    <div>
+      <button onClick={() => setButtonPopup(true)}> <img class="Door" src={OrangeDoor} alt="OrageDoor" /></button>
+      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+        <div className="EndingText">
+          <button onClick={() => window.alert('You win!!')}>T-Rex is the killer?</button>
+            <button onClick={() => window.alert('You lose!!')}>Asteroid is the killer?</button>
+          </div>
+          </Popup>
+      </div>
+    )
 }
 
 class EndingText extends React.Component {
@@ -44,10 +63,10 @@ class EndingText extends React.Component {
 const LandingRoom = () => {
   return (
     <div className='LandingRoom'>
-      <EndingText />
       <div class="container">
         <img class="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
       </div>
+      <Door/>
       <SpeechBubble/>
     </div>
   )
