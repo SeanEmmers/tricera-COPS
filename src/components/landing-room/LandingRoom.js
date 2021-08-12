@@ -1,5 +1,6 @@
 import React from "react";
 import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
+import jarOutline from "./room-one-images/jarOutline.png";
 
 class EndingText extends React.Component {
 
@@ -17,14 +18,15 @@ class EndingText extends React.Component {
 
 const LandingRoom = () => {
   return (
-    <div className='LandingRoom'>
+    <div className="LandingRoom">
       <p>Welcome to the Dino mystery!</p>
       <EndingText />
-      <div class="container">
-      <img src={RoomOneImage}  height="90%" width="80%" ></img>
+      <div class="parent">
+        <img class="backgroundImage" src={RoomOneImage} alt=" TriceraCop"></img>
+        <img class="ObjectOutline" src={jarOutline} alt="Jar"></img>
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
 export default LandingRoom;
