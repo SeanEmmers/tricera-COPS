@@ -1,6 +1,6 @@
 import React from "react";
 // import logo from "./img/Charrr.png";
-import "./App.css";
+// import "./App.css";
 import LandingRoom from "./components/landing-room/LandingRoom";
 
 function App() {
