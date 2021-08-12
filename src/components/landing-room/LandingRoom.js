@@ -1,4 +1,5 @@
 import React from "react";
+import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
 
 class EndingText extends React.Component {
 
@@ -19,6 +20,9 @@ const LandingRoom = () => {
     <div className='LandingRoom'>
       <p>Welcome to the Dino mystery!</p>
       <EndingText />
+      <div class="container">
+      <img src={RoomOneImage}  height="90%" width="80%" ></img>
+    </div>
     </div>
   )
 }
