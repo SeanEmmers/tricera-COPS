@@ -1,9 +1,8 @@
-/* .App {
-  text-align: center;
-} */
+/* 
+ */
 
-body  {
-  /* background-color:#638B8B; */
+body {
+  background: lightblue;
   height: 100%;
 }
 
@@ -28,20 +27,34 @@ body  {
   top: 0px;
   left: 0px;
 }
-
-body {
-	background: lightblue;
+.cop {
+  height: 90vh;
+  width: 99.9%;
+  position: absolute;
+  top: -705px;
+  left: 290px;
+ 
 }
+/* 
+#OrangeLine:checked.ObjectOutline {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 10;
+  left: 0;
+} */
+
 
 .bubble {
-	height: 200px;
-	width: 60%;
-	min-width: 200px;
-	background: rgb(60, 134, 163);
+	height: auto;
+	width: 50%;
+	/* min-width: 200px; */
+	background: #dde3e8;
 	display: block;
-	margin: 0 auto;
+	margin: 30px;
 	border-radius: 20px;
-	top: 580px;
+  border: 2px solid black;
+	top: 530px;
   left: 100px;
 	font-size: 30px;
 	text-align: center;
@@ -50,17 +63,27 @@ body {
 }
 
 .pointer {
-	height: 40px;
+	height: 18px;
 	width: 40px;
-  background: rgb(60, 134, 163);
+  background: #dde3e8;
+ 
 	margin: 0 auto;
 	transform: rotate(135deg);
 	border-radius: 0 0 12px 0;
 	margin-top: -30px;
-	position: absolute;
   right: calc(0.05vw - 13px);
+   position: absolute;
 }
 
+
+.EndingText {
+  height: auto;
+	width: auto;
+  background: #dde3e8;
+  top: 85px;
+  left: 0px;
+
+}
 .small-btn {
   width: 60px;
   height: 50px;
@@ -68,13 +91,13 @@ body {
   bottom: 12px;
   right: 30px;
   text-align: center;
-  background: rgb(60, 134, 163);
+  
   border: none;
   font-size: large;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   border-radius: 25px;
-}
-
+} 
+/* 
 .popup-btn {
   margin-left: 0.8cm;
   margin-right: 0.9cm;
@@ -85,19 +108,12 @@ body {
 	background: gray;
 	filter: blur(20px);
 	position: relative;
-	top: -315px;
+	top: -315px; */
 /* 	transform: scale(1.05); */
-	z-index: -1;
-}
+	/* z-index: -1;
+} */
   
 /* used onJar image - needs looking into.*/
-#OrangeLine:checked.ObjectOutline {
-  height: 100vh;
-  width: 99.9%;
-  position: absolute;
-  top: 10;
-  left: 0;
-}
 
 /* .App-logo {
   height: 40vmin;
