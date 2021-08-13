@@ -21,9 +21,9 @@ const LandingRoom = () => {
     <div className="LandingRoom">
       <p>Welcome to the Dino mystery!</p>
       <EndingText />
-      <div class="parent">
-        <img class="backgroundImage" src={RoomOneImage} alt=" TriceraCop"></img>
-        <img class="ObjectOutline" id="OrangeLine" src={jarOutline} alt="Jar"></img>
+      <div className="parent">
+        <img className="backgroundImage" src={RoomOneImage} alt=" TriceraCop"></img>
+        <img className="ObjectOutline" id="OrangeLine" src={jarOutline} alt="Jar"></img>
       </div> 
     </div>
   );

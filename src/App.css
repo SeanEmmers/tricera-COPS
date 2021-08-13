@@ -5,7 +5,6 @@
 body  {
   /* background-color:#638B8B; */
   height: 100%;
- 
 }
 
 .parent {
@@ -38,9 +37,6 @@ body  {
   top: 10;
   left: 0;
 }
-
-
-
 
 /* .App-logo {
   height: 40vmin;
