@@ -31,9 +31,17 @@ class SpeechBubble extends React.Component {
 }
 
 const Jar = () => {
+  const [buttonPopUp, setButtonPopup] = useState(false);
 
   return(
-    <img className="jarOutline" src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarCropped } onMouseOut={e => e.currentTarget.src = JarBasic }/>
+    <div>
+      <img className="jarOutline" onClick={() => setButtonPopup(true)} src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarCropped } onMouseOut={e => e.currentTarget.src = JarBasic }/>
+      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+        <div>
+          <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor. Curious.</p>
+        </div>
+      </Popup>
+    </div>
   )
 }
 
@@ -42,8 +50,7 @@ const Door = () => {
 
   return(
     <div>
-     <img className="doorOutline" onClick={() => setButtonPopup(true)} src={DoorImg} onMouseOver={e => e.currentTarget.src = OrangeDoor} onMouseOut={e => e.currentTarget.src = DoorImg } alt="OrangeDoor">
-      </img>
+     <img className="doorOutline" onClick={() => setButtonPopup(true)} src={DoorImg} onMouseOver={e => e.currentTarget.src = OrangeDoor} onMouseOut={e => e.currentTarget.src = DoorImg } alt="OrangeDoor" />
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div className="EndingText">
           <button className="popup-btn" onClick={() => window.alert('You win!!')}>T-Rex is the killer?</button>
@@ -59,8 +66,8 @@ const LandingRoom = () => {
     <div className='LandingRoom'>
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
-        <Jar/>
         <Door/>
+        <Jar/>
         <SpeechBubble/>
       </div>
     </div>
