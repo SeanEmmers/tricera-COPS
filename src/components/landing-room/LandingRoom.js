@@ -18,13 +18,11 @@ class SpeechBubble extends React.Component {
 
   render() {
     return(
-      <div>
-        <div className="bubble">{this.state.message}
-        <button onClick={this.updateContent}>
-          Next...
-        </button>
+      <div className="bubble">{this.state.message}
+        <div className="bubble-inner">
+          <button className="small-btn" onClick={this.updateContent}>...</button>
+          <div className="pointer"></div>
         </div>
-        <div className="pointer"></div>
       </div>
     )
   }
@@ -38,27 +36,13 @@ const Door = () => {
       <button onClick={() => setButtonPopup(true)}> <img class="Door" src={OrangeDoor} alt="OrageDoor" /></button>
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div className="EndingText">
-          <button onClick={() => window.alert('You win!!')}>T-Rex is the killer?</button>
-            <button onClick={() => window.alert('You lose!!')}>Asteroid is the killer?</button>
-          </div>
-          </Popup>
-      </div>
+          <button className="popup-btn" onClick={() => window.alert('You win!!')}>T-Rex is the killer?</button>
+          <button className="popup-btn" onClick={() => window.alert('You lose!!')}>Asteroid is the killer?</button>
+        </div>
+      </Popup>
+    </div>
     )
 }
-
-class EndingText extends React.Component {
-
-  onButtonClickHandler = (props) => {
-    window.alert(props)
-  }
-
-  render(){ 
-    return(<div className="EndingText">
-      <button onClick={() => this.onButtonClickHandler('You win!!')}>T-Rex is the killer?</button>
-      <button onClick={() => this.onButtonClickHandler('You lose!!')}>Asteroid is the killer?</button>
-    </div>);
-  }
-};
 
 const LandingRoom = () => {
   return (
@@ -71,5 +55,19 @@ const LandingRoom = () => {
     </div>
   )
 }
+
+// class EndingText extends React.Component {
+
+//   onButtonClickHandler = (props) => {
+//     window.alert(props)
+//   }
+
+//   render(){ 
+//     return(<div className="EndingText">
+//       <button onClick={() => this.onButtonClickHandler('You win!!')}>T-Rex is the killer?</button>
+//       <button onClick={() => this.onButtonClickHandler('You lose!!')}>Asteroid is the killer?</button>
+//     </div>);
+//   }
+// };
 
 export default LandingRoom;
