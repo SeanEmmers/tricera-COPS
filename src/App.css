@@ -21,13 +21,39 @@ body  {
   left: 0;
 }
 
-.objectOutline {
+/* .objectOutline {
   height: 100vh;
   width: 99.9%;
   position: absolute;
   top: 0px;
   left: 0px;
+} */
+
+.doorOutline {
+  height: 44%;
+  width: 22%;
+  position: absolute;
+  top: 24%;
+  right: 40%;
+  border: none;
+  outline: transparent;
 }
+
+/* .doorOutline:hover {
+  box-shadow: 0 20px 40px 0 rgba(243, 199, 4, 0.877);
+} */
+
+.jarOutline {
+  height: 15.5%;
+  width: 5%;
+  position: absolute;
+  top: 30%;
+  left: 19.5%;
+}
+
+/* .jarOutline:hover {
+  box-shadow: 0 20px 40px 0 rgba(243, 199, 4, 0.877);
+} */
 
 body {
 	background: lightblue;

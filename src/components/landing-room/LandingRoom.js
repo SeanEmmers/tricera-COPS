@@ -1,9 +1,11 @@
 import React from "react";
 import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
-import OrangeDoor from "./room-one-images/orange-door.png";
+import OrangeDoor from "./room-one-images/DoorOrangeCropped.png";
 import Popup from "./PopUp";
 import { useState } from 'react';
-import jarOutline from "./room-one-images/jarOutline.png";
+import JarCropped from "./room-one-images/jar-cropped.jpeg";
+import DoorImg from "./room-one-images/CroppedDoorFinal.png";
+import JarBasic from "./room-one-images/CroppedJarFinal.png";
 
 class SpeechBubble extends React.Component {
   constructor(props) {
@@ -28,13 +30,27 @@ class SpeechBubble extends React.Component {
   }
 }
 
+const Jar = () => {
+  const [buttonPopUp, setButtonPopup] = useState(false);
+
+  return(
+    <div>
+      <img className="jarOutline" onClick={() => setButtonPopup(true)} src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarCropped } onMouseOut={e => e.currentTarget.src = JarBasic }/>
+      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+        <div>
+          <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor. Curious.</p>
+        </div>
+      </Popup>
+    </div>
+  )
+}
+
 const Door = () => {
   const [buttonPopUp, setButtonPopup] = useState(false);
 
   return(
     <div>
-     <img className="objectOutline" onClick={() => setButtonPopup(true)} src={OrangeDoor} alt="OrageDoor">
-      </img>
+     <img className="doorOutline" onClick={() => setButtonPopup(true)} src={DoorImg} onMouseOver={e => e.currentTarget.src = OrangeDoor} onMouseOut={e => e.currentTarget.src = DoorImg } alt="OrangeDoor" />
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div className="EndingText">
           <button className="popup-btn" onClick={() => window.alert('You win!!')}>T-Rex is the killer?</button>
@@ -50,8 +66,8 @@ const LandingRoom = () => {
     <div className='LandingRoom'>
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
-        <img className="objectOutline" id="OrangeLine" src={jarOutline} alt="Jar" />
         <Door/>
+        <Jar/>
         <SpeechBubble/>
       </div>
     </div>
