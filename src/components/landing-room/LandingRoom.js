@@ -6,27 +6,34 @@ import { useState } from 'react';
 import JarGlow from "./room-one-images/JarCroppedFinal.png";
 import DoorBasic from "./room-one-images/CroppedDoorFinal.png";
 import JarBasic from "./room-one-images/CroppedJarFinal.png";
+import Cop from "./room-one-images/triceCOP.png";
 
 class SpeechBubble extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        message: "Hello, I am Tricera-cop"
-    }
-  }
-  
-  updateContent = () => {
-    this.setState({ message: "We are locked in here, I need your help to escape and catch the killer!"});
+      message: "Hello, I am Tricera-cop",
+    };
   }
 
+  updateContent = () => {
+    this.setState({
+      message:
+        "We are locked in here, I need your help to escape and catch the killer!",
+    });
+  };
+
   render() {
-    return(
-      <div className="bubble">{this.state.message}
-          <br/>
-          <button className="small-btn" onClick={this.updateContent}>Next...</button>
-          <div className="pointer"></div>
+    return (
+      <div className="bubble">
+        {this.state.message}
+        <br />
+        <button className="small-btn" onClick={this.updateContent}>
+          Next...
+        </button>
+        <div className="pointer"></div>
       </div>
-    )
+    );
   }
 }
 
@@ -50,7 +57,7 @@ const Door = () => {
 
   return(
     <div>
-     <img className="doorOutline" onClick={() => setButtonPopup(true)} src={DoorBasic} onMouseOver={e => e.currentTarget.src = DoorGlow} onMouseOut={e => e.currentTarget.src = DoorBasic } alt="OrangeDoor"/>
+      <img className="doorOutline" onClick={() => setButtonPopup(true)} src={DoorBasic} onMouseOver={e => e.currentTarget.src = DoorGlow} onMouseOut={e => e.currentTarget.src = DoorBasic } alt="OrangeDoor"/>
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div className="EndingText">
           <button className="popup-btn" onClick={() => window.alert('You win!!')}>T-Rex is the killer?</button>
@@ -58,20 +65,31 @@ const Door = () => {
         </div>
       </Popup>
     </div>
-    )
+  );
 }
 
-const LandingRoom = () => {
+const DinoCop = () => {
   return (
-    <div className='LandingRoom'>
+    <div>
       <div className="parent">
-        <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
-        <Door/>
-        <Jar/>
-        <SpeechBubble/>
+        <img className="cop" src={Cop} alt="TriceraCop" />
       </div>
     </div>
   );
-}
+};
+
+const LandingRoom = () => {
+  return (
+    <div className="LandingRoom">
+      <div className="parent">
+        <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop"/>
+        <Door/>
+        <Jar/>
+        <SpeechBubble/>
+        <DinoCop/>
+      </div>
+    </div>
+  );
+};
 
 export default LandingRoom;
