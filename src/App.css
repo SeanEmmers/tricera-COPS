@@ -20,20 +20,13 @@ body {
   left: 0;
 }
 
+
 .objectOutline {
   height: 100vh;
   width: 99.9%;
   position: absolute;
   top: 0px;
   left: 0px;
-}
-.cop {
-  height: 90vh;
-  width: 99.9%;
-  position: absolute;
-  top: -705px;
-  left: 290px;
- 
 }
 /* 
 #OrangeLine:checked.ObjectOutline {
@@ -80,10 +73,10 @@ body {
   height: auto;
 	width: auto;
   background: #dde3e8;
-  top: 85px;
+  top: -1000px;
   left: 0px;
-
 }
+
 .small-btn {
   width: 60px;
   height: 50px;
@@ -97,6 +90,15 @@ body {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   border-radius: 25px;
 } 
+
+.cop {
+  height: 100vh;
+  width: 99.9%;
+  position: absolute;
+  top: -500px;
+  left: 250px;
+}
+
 /* 
 .popup-btn {
   margin-left: 0.8cm;

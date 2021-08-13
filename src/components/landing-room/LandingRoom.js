@@ -54,7 +54,6 @@ const Door = () => {
               >
                 T-Rex is the killer?
               </button>
-
               <button
                 className="popup-btn"
                 onClick={() => window.alert("You lose!!")}
