@@ -37,6 +37,14 @@ body  {
   right: 40%;
 }
 
+.jarOutline {
+  height: 17%;
+  width: 5%;
+  position: absolute;
+  top: 30%;
+  left: 19.5%;
+}
+
 body {
 	background: lightblue;
 }

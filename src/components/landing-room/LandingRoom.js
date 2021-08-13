@@ -3,7 +3,7 @@ import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
 import OrangeDoor from "./room-one-images/orange-door-test.jpeg";
 import Popup from "./PopUp";
 import { useState } from 'react';
-import jarOutline from "./room-one-images/jarOutline.png";
+import JarCropped from "./room-one-images/jar-cropped.jpeg";
 
 class SpeechBubble extends React.Component {
   constructor(props) {
@@ -50,7 +50,7 @@ const LandingRoom = () => {
     <div className='LandingRoom'>
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
-        {/* <img className="objectOutline" id="OrangeLine" src={jarOutline} alt="Jar" /> */}
+        <img className="jarOutline" id="OrangeLine" src={JarCropped} alt="Jar" />
         <Door/>
         <SpeechBubble/>
       </div>
