@@ -1,11 +1,11 @@
 import React from "react";
 import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
-import OrangeDoor from "./room-one-images/orange-door-test.jpeg";
+import OrangeDoor from "./room-one-images/DoorOrangeCropped.png";
 import Popup from "./PopUp";
 import { useState } from 'react';
 import JarCropped from "./room-one-images/jar-cropped.jpeg";
-import DoorImg from "./room-one-images/roomOneDoor.jpeg";
-import JarBasic from "./room-one-images/JarBasic.jpeg";
+import DoorImg from "./room-one-images/CroppedDoorFinal.png";
+import JarBasic from "./room-one-images/CroppedJarFinal.png";
 
 class SpeechBubble extends React.Component {
   constructor(props) {

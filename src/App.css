@@ -35,15 +35,25 @@ body  {
   position: absolute;
   top: 24%;
   right: 40%;
+  border: none;
+  outline: transparent;
 }
 
+/* .doorOutline:hover {
+  box-shadow: 0 20px 40px 0 rgba(243, 199, 4, 0.877);
+} */
+
 .jarOutline {
-  height: 17%;
+  height: 15.5%;
   width: 5%;
   position: absolute;
   top: 30%;
   left: 19.5%;
 }
+
+/* .jarOutline:hover {
+  box-shadow: 0 20px 40px 0 rgba(243, 199, 4, 0.877);
+} */
 
 body {
 	background: lightblue;
