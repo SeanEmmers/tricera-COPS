@@ -1,10 +1,10 @@
 import React from "react";
 import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
-import OrangeDoor from "./room-one-images/DoorOrangeCropped.png";
+import DoorGlow from "./room-one-images/DoorOrangeCropped.png";
 import Popup from "./PopUp";
 import { useState } from 'react';
-import JarCropped from "./room-one-images/jar-cropped.jpeg";
-import DoorImg from "./room-one-images/CroppedDoorFinal.png";
+import JarGlow from "./room-one-images/JarCroppedFinal.png";
+import DoorBasic from "./room-one-images/CroppedDoorFinal.png";
 import JarBasic from "./room-one-images/CroppedJarFinal.png";
 
 class SpeechBubble extends React.Component {
@@ -35,7 +35,7 @@ const Jar = () => {
 
   return(
     <div>
-      <img className="jarOutline" onClick={() => setButtonPopup(true)} src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarCropped } onMouseOut={e => e.currentTarget.src = JarBasic }/>
+      <img className="jarOutline" onClick={() => setButtonPopup(true)} src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarGlow } onMouseOut={e => e.currentTarget.src = JarBasic }/>
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div>
           <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor. Curious.</p>
@@ -50,7 +50,7 @@ const Door = () => {
 
   return(
     <div>
-     <img className="doorOutline" onClick={() => setButtonPopup(true)} src={DoorImg} onMouseOver={e => e.currentTarget.src = OrangeDoor} onMouseOut={e => e.currentTarget.src = DoorImg } alt="OrangeDoor" />
+     <img className="doorOutline" onClick={() => setButtonPopup(true)} src={DoorBasic} onMouseOver={e => e.currentTarget.src = DoorGlow} onMouseOut={e => e.currentTarget.src = DoorBasic } alt="OrangeDoor"/>
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div className="EndingText">
           <button className="popup-btn" onClick={() => window.alert('You win!!')}>T-Rex is the killer?</button>
