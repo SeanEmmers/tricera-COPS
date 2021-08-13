@@ -19,10 +19,9 @@ class SpeechBubble extends React.Component {
   render() {
     return(
       <div className="bubble">{this.state.message}
-        <div className="bubble-inner">
-          <button className="small-btn" onClick={this.updateContent}>...</button>
+          <br/>
+          <button className="small-btn" onClick={this.updateContent}>Next...</button>
           <div className="pointer"></div>
-        </div>
       </div>
     )
   }
@@ -33,7 +32,8 @@ const Door = () => {
 
   return(
     <div>
-      <button onClick={() => setButtonPopup(true)}> <img class="Door" src={OrangeDoor} alt="OrageDoor" /></button>
+     <img className="objectOutline" onClick={() => setButtonPopup(true)} src={OrangeDoor} alt="OrageDoor">
+      </img>
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div className="EndingText">
           <button className="popup-btn" onClick={() => window.alert('You win!!')}>T-Rex is the killer?</button>
@@ -47,11 +47,11 @@ const Door = () => {
 const LandingRoom = () => {
   return (
     <div className='LandingRoom'>
-      <div class="container">
-        <img class="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
+      <div className="container">
+        <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
+        <Door/>
+        <SpeechBubble/>
       </div>
-      <Door/>
-      <SpeechBubble/>
     </div>
   )
 }
