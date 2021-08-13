@@ -50,7 +50,7 @@ const LandingRoom = () => {
     <div className='LandingRoom'>
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
-        <img className="ObjectOutline" id="OrangeLine" src={jarOutline} alt="Jar" />
+        <img className="objectOutline" id="OrangeLine" src={jarOutline} alt="Jar" />
         <Door/>
         <SpeechBubble/>
       </div>
