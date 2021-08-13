@@ -42,7 +42,7 @@ const Door = () => {
 
   return(
     <div>
-     <img className="doorOutline" onClick={() => setButtonPopup(true)} src={DoorImg} onMouseOver={e => e.currentTarget.src = OrangeDoor} onMouseOut={e => e.currentTarget.src = DoorImg } alt="OrangeDoor">
+     <img className="doorOutline" onClick={() => setButtonPopup(true)} src={DoorImg}>
       </img>
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div className="EndingText">
