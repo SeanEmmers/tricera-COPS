@@ -1,6 +1,6 @@
 import React from "react";
 import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
-import OrangeDoor from "./room-one-images/orange-door.png";
+import OrangeDoor from "./room-one-images/orange-door-test.jpeg";
 import Popup from "./PopUp";
 import { useState } from 'react';
 import jarOutline from "./room-one-images/jarOutline.png";
@@ -33,7 +33,7 @@ const Door = () => {
 
   return(
     <div>
-     <img className="objectOutline" onClick={() => setButtonPopup(true)} src={OrangeDoor} alt="OrageDoor">
+     <img className="doorOutline" onClick={() => setButtonPopup(true)} src={OrangeDoor} alt="OrangeDoor">
       </img>
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div className="EndingText">
@@ -50,7 +50,7 @@ const LandingRoom = () => {
     <div className='LandingRoom'>
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
-        <img className="objectOutline" id="OrangeLine" src={jarOutline} alt="Jar" />
+        {/* <img className="objectOutline" id="OrangeLine" src={jarOutline} alt="Jar" /> */}
         <Door/>
         <SpeechBubble/>
       </div>
