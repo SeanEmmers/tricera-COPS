@@ -23,8 +23,8 @@ const LandingRoom = () => {
       <EndingText />
       <div class="parent">
         <img class="backgroundImage" src={RoomOneImage} alt=" TriceraCop"></img>
-        <img class="ObjectOutline" src={jarOutline} alt="Jar"></img>
-      </div>
+        <img class="ObjectOutline" id="OrangeLine" src={jarOutline} alt="Jar"></img>
+      </div> 
     </div>
   );
 }
