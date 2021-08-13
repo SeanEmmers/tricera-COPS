@@ -5,6 +5,7 @@ import Popup from "./PopUp";
 import { useState } from 'react';
 import JarCropped from "./room-one-images/jar-cropped.jpeg";
 import DoorImg from "./room-one-images/roomOneDoor.jpeg";
+import JarBasic from "./room-one-images/JarBasic.jpeg";
 
 class SpeechBubble extends React.Component {
   constructor(props) {
@@ -29,6 +30,13 @@ class SpeechBubble extends React.Component {
   }
 }
 
+const Jar = () => {
+
+  return(
+    <img className="jarOutline" src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarCropped } onMouseOut={e => e.currentTarget.src = JarBasic }/>
+  )
+}
+
 const Door = () => {
   const [buttonPopUp, setButtonPopup] = useState(false);
 
@@ -51,7 +59,7 @@ const LandingRoom = () => {
     <div className='LandingRoom'>
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
-        <img className="jarOutline" src={JarCropped} alt="Jar" />
+        <Jar/>
         <Door/>
         <SpeechBubble/>
       </div>
