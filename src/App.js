@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import LandingRoom from "./components/landing-room/LandingRoom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [data, setData] = React.useState(null);
