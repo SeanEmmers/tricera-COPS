@@ -1,10 +1,10 @@
 import React from "react";
 import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
 import OrangeDoor from "./room-one-images/orange-door.png";
-import Cop from "./room-one-images/triceCOP.png";
 import Popup from "./PopUp";
 import { useState } from "react";
 import jarOutline from "./room-one-images/jarOutline.png";
+import Cop from "./room-one-images/triceCOP.png";
 
 class SpeechBubble extends React.Component {
   constructor(props) {
@@ -46,8 +46,8 @@ const Door = () => {
             src={OrangeDoor}
             alt="Door"
           />
-          <div className="EndingText">
-            <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+          <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+            <div className="EndingText">
               <button
                 className="popup-btn"
                 onClick={() => window.alert("You win!!")}
@@ -60,10 +60,24 @@ const Door = () => {
               >
                 Asteroid is the killer?
               </button>
-            </Popup>
-          </div>
+            </div>
+          </Popup>
         </div>
       );
+};
+
+
+const LandingRoom = () => {
+  return (
+    <div className="LandingRoom">
+      <div className="parent">
+        <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
+        <Door />
+        <DinoCop />
+        <SpeechBubble />
+      </div>
+    </div>
+  );
 };
 
 const DinoCop = () => {
@@ -71,20 +85,6 @@ const DinoCop = () => {
     <div>
       <div className="parent">
         <img className="cop" src={Cop} alt="TriceraCop" />
-      </div>
-    </div>
-  );
-};
-
-const LandingRoom = () => {
-  return (
-    <div className="LandingRoom">
-      <div className="parent">
-        <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
-        <img className="objectOutline" id="OrangeLine" src={jarOutline} alt="Jar" />
-        <Door />
-        <DinoCop />
-        <SpeechBubble />
       </div>
     </div>
   );
