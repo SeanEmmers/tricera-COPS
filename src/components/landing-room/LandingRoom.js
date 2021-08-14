@@ -68,15 +68,6 @@ const Door = () => {
   );
 }
 
-const DinoCop = () => {
-  return (
-    <div>
-      <div className="parent">
-        <img className="cop" src={Cop} alt="TriceraCop" />
-      </div>
-    </div>
-  );
-};
 
 const LandingRoom = () => {
   return (
@@ -87,6 +78,16 @@ const LandingRoom = () => {
         <Jar/>
         <SpeechBubble/>
         <DinoCop/>
+      </div>
+    </div>
+  );
+};
+
+const DinoCop = () => {
+  return (
+    <div>
+      <div className="parent">
+        <img className="cop" src={Cop} alt="TriceraCop" />
       </div>
     </div>
   );
