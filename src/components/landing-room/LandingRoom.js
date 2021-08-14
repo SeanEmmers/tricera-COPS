@@ -86,7 +86,7 @@ const LandingRoom = () => {
 const DinoCop = () => {
   return (
     <div>
-      <div className="parent">
+      <div>
         <img className="cop" src={Cop} alt="TriceraCop" />
       </div>
     </div>
