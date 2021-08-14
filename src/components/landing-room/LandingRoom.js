@@ -28,10 +28,10 @@ class SpeechBubble extends React.Component {
       <div className="bubble">
         {this.state.message}
         <br />
+        <div className="pointer"></div>
         <button className="small-btn" onClick={this.updateContent}>
           Next...
         </button>
-        <div className="pointer"></div>
       </div>
     );
   }
