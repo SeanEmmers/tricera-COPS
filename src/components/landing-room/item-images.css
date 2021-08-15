@@ -1,0 +1,15 @@
+.tooth-image {
+  height: 10%;
+  width: 4%;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+.large-tooth-image {
+  height: 40%;
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
