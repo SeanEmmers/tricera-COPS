@@ -9,7 +9,6 @@ import JarBasic from "./room-one-images/CroppedJarFinal.png";
 import Cop from "./room-one-images/triceCOP.png";
 import MirrorBasic from "./room-one-images/basic-mirror.png";
 import MirrorGlow from "./room-one-images/highlighted-mirror.png";
-import Tooth from "./Tooth";
 
 class SpeechBubble extends React.Component {
   constructor(props) {
@@ -54,8 +53,6 @@ const Mirror = () => {
     </div>
   )
 }
-
-
 
 const Jar = () => {
   const [buttonPopUp, setButtonPopup] = useState(false);
@@ -104,7 +101,6 @@ const LandingRoom = () => {
         <Jar/>
         <SpeechBubble/>
         <Mirror/>
-        <Tooth/>
       </div>
     </div>
   );
