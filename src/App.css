@@ -34,6 +34,17 @@ body {
   border: none;
   outline: transparent;
 }
+
+.mirrorOutline {
+  height: 30%;
+  width: 19.5%;
+  position: absolute;
+  top: 15.5%;
+  left: 0.1%;
+  border: none;
+  outline: transparent;
+}
+
 /* 
 #OrangeLine:checked.ObjectOutline {
   height: 100vh;
@@ -50,7 +61,7 @@ body {
 
 .jarOutline {
   height: 15.5%;
-  width: 5%;
+  width: 4.5%;
   position: absolute;
   top: 30%;
   left: 19.5%;

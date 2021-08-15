@@ -7,6 +7,8 @@ import JarGlow from "./room-one-images/JarCroppedFinal.png";
 import DoorBasic from "./room-one-images/CroppedDoorFinal.png";
 import JarBasic from "./room-one-images/CroppedJarFinal.png";
 import Cop from "./room-one-images/triceCOP.png";
+import MirrorBasic from "./room-one-images/basic-mirror.png";
+import MirrorGlow from "./room-one-images/highlighted-mirror.png";
 
 class SpeechBubble extends React.Component {
   constructor(props) {
@@ -35,6 +37,21 @@ class SpeechBubble extends React.Component {
       </div>
     );
   }
+}
+
+const Mirror = () => {
+  const [buttonPopUp, setButtonPopup] = useState(false);
+
+  return(
+    <div>
+      <img className="mirrorOutline" onClick={() => setButtonPopup(true)} src={MirrorBasic} alt="Mirror" onMouseOver={e => e.currentTarget.src = MirrorGlow } onMouseOut={e => e.currentTarget.src = MirrorBasic }/>
+      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+        <div>
+          <p>Placeholder text</p>
+        </div>
+      </Popup>
+    </div>
+  )
 }
 
 const Jar = () => {
@@ -83,6 +100,7 @@ const LandingRoom = () => {
         <Jar/>
         <SpeechBubble/>
         <DinoCop/>
+        <Mirror/>
       </div>
     </div>
   );
