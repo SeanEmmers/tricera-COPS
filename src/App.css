@@ -49,6 +49,7 @@ body {
   left: 0.1%;
   border: none;
   outline: transparent;
+
 }
 
 /* 
@@ -123,6 +124,7 @@ body {
   background: #dde3e8;
   top: -1000px;
   left: 0px;
+    z-index: inherit;
 }
 
 .small-btn {

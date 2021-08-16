@@ -10,6 +10,7 @@ import Cop from "./room-one-images/triceCOP.png";
 import MirrorBasic from "./room-one-images/basic-mirror.png";
 import MirrorGlow from "./room-one-images/highlighted-mirror.png";
 import { Button } from "react-bootstrap";
+import Inventory from "./Inventory.js";
 
 class SpeechBubble extends React.Component {
   constructor(props) {
@@ -82,13 +83,31 @@ const Jar = () => {
 const Door = () => {
   const [buttonPopUp, setButtonPopup] = useState(false);
 
-  return(
+  return (
     <div>
-      <img className="doorOutline" onClick={() => setButtonPopup(true)} src={DoorBasic} onMouseOver={e => e.currentTarget.src = DoorGlow} onMouseOut={e => e.currentTarget.src = DoorBasic } alt="OrangeDoor"/>
+      
+      <img
+        className="doorOutline"
+        onClick={() => setButtonPopup(true)}
+        src={DoorBasic}
+        onMouseOver={(e) => (e.currentTarget.src = DoorGlow)}
+        onMouseOut={(e) => (e.currentTarget.src = DoorBasic)}
+        alt="OrangeDoor"
+      />
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div className="EndingText">
-          <button className="popup-btn" onClick={() => window.alert('You win!!')}>T-Rex is the killer?</button>
-          <button className="popup-btn" onClick={() => window.alert('You lose!!')}>Asteroid is the killer?</button>
+          <button
+            className="popup-btn"
+            onClick={() => window.alert("You win!!")}
+          >
+            T-Rex is the killer?
+          </button>
+          <button
+            className="popup-btn"
+            onClick={() => window.alert("You lose!!")}
+          >
+            Asteroid is the killer?
+          </button>
         </div>
       </Popup>
     </div>
@@ -105,12 +124,13 @@ const LandingRoom = () => {
   return (
     <div className="LandingRoom">
       <div className="parent">
-        <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop"/>
-        <DinoCop/>
-        <Door/>
-        <Jar/>
-        <SpeechBubble/>
-        <Mirror/>
+        <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
+        <DinoCop />
+        <Door />
+        <Jar />
+        <SpeechBubble />
+        <Mirror />
+        <Inventory />
       </div>
     </div>
   );

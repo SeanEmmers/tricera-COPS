@@ -1,6 +1,6 @@
 import React from 'react'
 import './PopUp.css'
-import { Container, Row, Col, CloseButton } from "react-bootstrap";
+import { Container, Row, Col, CloseButton, Button } from "react-bootstrap";
 
 function Popup(props) {
   return props.trigger ? (
@@ -8,16 +8,16 @@ function Popup(props) {
       <Container>
         <Row>
           <Col></Col>
-            <div className="popup-inner">
-              <button
-                className="close-btn"
-                onClick={() => props.setTrigger(false)}
-              >
-                <CloseButton />{" "}
-              </button>
-              {props.children}
-            </div>
-          
+          <div className="popup-inner">
+            <button
+              className="close-btn"
+              onClick={() => props.setTrigger(false)}
+            >
+              <CloseButton />{" "}
+            </button>
+            {props.children}
+            <Button id="collectButton" variant="outline-warning">Collect item</Button>
+          </div>
         </Row>
       </Container>
     </div>

@@ -30,6 +30,7 @@ function App() {
         <br />
         <Row>
           <Col lg="2">
+           
             <Inventory />
           </Col>
 
