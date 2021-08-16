@@ -7,6 +7,8 @@ import JarGlow from "./room-one-images/JarCroppedFinal.png";
 import DoorBasic from "./room-one-images/CroppedDoorFinal.png";
 import JarBasic from "./room-one-images/CroppedJarFinal.png";
 import Cop from "./room-one-images/triceCOP.png";
+import MirrorBasic from "./room-one-images/basic-mirror.png";
+import MirrorGlow from "./room-one-images/highlighted-mirror.png";
 import { Button } from "react-bootstrap";
 
 class SpeechBubble extends React.Component {
@@ -47,6 +49,21 @@ class SpeechBubble extends React.Component {
   }
 }
 
+const Mirror = () => {
+  const [buttonPopUp, setButtonPopup] = useState(false);
+
+  return(
+    <div>
+      <img className="mirrorOutline" onClick={() => setButtonPopup(true)} src={MirrorBasic} alt="Mirror" onMouseOver={e => e.currentTarget.src = MirrorGlow } onMouseOut={e => e.currentTarget.src = MirrorBasic }/>
+      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+        <div>
+          <p>Placeholder text</p>
+        </div>
+      </Popup>
+    </div>
+  )
+}
+
 const Jar = () => {
   const [buttonPopUp, setButtonPopup] = useState(false);
 
@@ -78,26 +95,22 @@ const Door = () => {
   );
 }
 
+const DinoCop = () => {
+  return (
+    <img className="cop" src={Cop} alt="TriceraCop" />
+  );
+};
 
 const LandingRoom = () => {
   return (
     <div className="LandingRoom">
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop"/>
+        <DinoCop/>
         <Door/>
         <Jar/>
         <SpeechBubble/>
-        <DinoCop/>
-      </div>
-    </div>
-  );
-};
-
-const DinoCop = () => {
-  return (
-    <div>
-      <div>
-        <img className="cop" src={Cop} alt="TriceraCop" />
+        <Mirror/>
       </div>
     </div>
   );
