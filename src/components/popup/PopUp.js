@@ -17,7 +17,6 @@ function Popup(props) {
               </button>
               {props.children}
             </div>
-          
         </Row>
       </Container>
     </div>
