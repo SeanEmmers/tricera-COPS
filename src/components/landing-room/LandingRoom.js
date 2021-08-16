@@ -26,21 +26,6 @@ const Mirror = () => {
   )
 }
 
-const Jar = () => {
-  const [buttonPopUp, setButtonPopup] = useState(false);
-
-  return(
-    <div>
-      <img className="jarOutline" onClick={() => setButtonPopup(true)} src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarGlow } onMouseOut={e => e.currentTarget.src = JarBasic }/>
-      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
-        <div>
-          <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor. Curious.</p>
-        </div>
-      </Popup>
-    </div>
-  )
-}
-
 const Door = () => {
   const [buttonPopUp, setButtonPopup] = useState(false);
 
@@ -62,17 +47,49 @@ const DinoCop = () => {
     <img className="cop" src={Cop} alt="TriceraCop" />
   );
 };
+const Tooth = () => {
+  
+  return(
+    <div>
+      <img className = "tooth-small" src={BloodyTooth} alt="tooth image" id = 'tooth'  onMouseOver={e => e.currentTarget.className = 'tooth-large' }onMouseOut={e => e.currentTarget.className = 'tooth-small' }/>
+    </div>
+  )
+};
+
+const Jar = ({doorMethod}) => {
+  const [buttonPopUp, setButtonPopup] = useState(false);
+
+  const ClickHandler = () => {
+    doorMethod(true);
+    setButtonPopup(true);
+  };
+
+  return(
+    <div>
+      <img className="jarOutline" onClick={() => ClickHandler()} src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarGlow } onMouseOut={e => e.currentTarget.src = JarBasic }/>
+      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+        <div>
+          <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor. Curious.</p>
+        </div>
+      </Popup>
+    </div>
+  )
+}
 
 const LandingRoom = () => {
+  const [show, setShow] = useState(false)
+
   return (
     <div className="LandingRoom">
       <div className="parent">
-        <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop"/>
-        <DinoCop/>
-        <Door/>
-        <Jar/>
-        <SpeechBubble/>
-        <Mirror/>
+        <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
+        <DinoCop />
+        <Door />
+        <Jar doorMethod = {setShow}/>
+        {show? <Tooth /> : null}
+        <SpeechBubble />
+        <Mirror />
+        <Inventory />
       </div>
     </div>
   );
