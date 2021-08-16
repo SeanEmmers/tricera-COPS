@@ -1,0 +1,46 @@
+.bubble {
+  height: auto;
+  width: 45%;
+  position: absolute;
+  /* min-width: 200px; */
+  background: #dde3e8;
+  display: block;
+  margin: 30px;
+  padding: 15px 65px 15px 15px;
+  border-radius: 20px;
+  border: 1px solid black;
+  bottom: 100px;
+  /* left: 160px; */
+  left: 20%;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pointer {
+  height: 18px;
+  width: 40px;
+  background: #dde3e8;
+  margin: 0 auto;
+  transform: rotate(135deg);
+  border-radius: 0 0 12px 0;
+  margin-top: -30px;
+  right: calc(0.5vw - 13px);
+  position: absolute;
+}
+
+.small-btn {
+  width: 60px;
+  height: 35px;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  text-align: center;
+  margin-bottom: 3px;
+  /* border: 1px solid black; */
+  font-size: medium;
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+  /* border-radius: 20px;
+  background: #6cb3a6;
+  border: 1.5px solid rgb(0, 0, 0); */
+}

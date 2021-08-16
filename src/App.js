@@ -4,7 +4,7 @@ import LandingRoom from "./components/landing-room/LandingRoom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar} from "react-bootstrap";
 import {Container, Row, Col} from "react-bootstrap";
-import Inventory from "./components/landing-room/Inventory";
+import Inventory from "./components/inventory/Inventory";
 
 function App() {
  
