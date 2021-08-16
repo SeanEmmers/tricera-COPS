@@ -16,7 +16,6 @@ function Popup(props) {
               <CloseButton />{" "}
             </button>
             {props.children}
-            <Button id="collectButton" variant="outline-warning">Collect item</Button>
           </div>
         </Row>
       </Container>
