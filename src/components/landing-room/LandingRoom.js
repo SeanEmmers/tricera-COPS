@@ -9,12 +9,15 @@ import JarBasic from "./room-one-images/CroppedJarFinal.png";
 import Cop from "./room-one-images/triceCOP.png";
 import MirrorBasic from "./room-one-images/basic-mirror.png";
 import MirrorGlow from "./room-one-images/highlighted-mirror.png";
+import { Button } from "react-bootstrap";
 
 class SpeechBubble extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      
       message: "Hello, I am Tricera-cop",
+     
     };
   }
 
@@ -31,9 +34,16 @@ class SpeechBubble extends React.Component {
         {this.state.message}
         <br />
         <div className="pointer"></div>
-        <button className="small-btn" onClick={this.updateContent}>
-          Next...
-        </button>
+
+        <div className="small-btn">
+          <Button
+            size="sm"
+            variant="outline-secondary"
+            onClick={this.updateContent}
+          >
+            Next...
+          </Button>
+        </div>
       </div>
     );
   }
