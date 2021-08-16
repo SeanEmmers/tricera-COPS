@@ -71,7 +71,6 @@ const Door = () => {
 
   return (
     <div>
-      
       <img
         className="doorOutline"
         onClick={() => setButtonPopup(true)}
@@ -82,6 +81,7 @@ const Door = () => {
       />
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div className="EndingText">
+         
           <button
             className="popup-btn"
             onClick={() => window.alert("You win!!")}
@@ -110,7 +110,7 @@ const Tooth = () => {
   
   return(
     <div>
-      <img className = "tooth-small" src={BloodyTooth} alt="tooth image" id = 'tooth'  onMouseOver={e => e.currentTarget.className = 'tooth-large' }onMouseOut={e => e.currentTarget.className = 'tooth-small' }/>
+      <img className = "tooth-small" src={BloodyTooth} alt="tooth image" id = 'tooth'  onMouseOver={e => e.currentTarget.className = 'tooth-large' }onMouseOut={e => e.currentTarget.className = 'tooth-small' } />
     </div>
   )
 };
@@ -128,7 +128,7 @@ const Jar = ({doorMethod}) => {
       <img className="jarOutline" onClick={() => ClickHandler()} src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarGlow } onMouseOut={e => e.currentTarget.src = JarBasic }/>
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div>
-          <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor. Curious.</p>
+          <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor. Curious? Check you inventory!</p>
         </div>
       </Popup>
     </div>
