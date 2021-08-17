@@ -1,5 +1,5 @@
-import ChalkOutlineImage from "../landing-room/landing-room-images/ChalkOutline.png";
-import ChalkOutlineGlow from "../landing-room/landing-room-images/ChalkOutlineGlow.png";
+import ChalkOutlineImage from "./chalkoutline-images/ChalkOutline.png";
+import ChalkOutlineGlow from ".//chalkoutline-images/ChalkOutlineGlow.png";
 import Popup from "../popup/PopUp";
 import "./ChalkOutline.css";
 import React from "react";

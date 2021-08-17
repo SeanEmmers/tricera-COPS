@@ -1,12 +1,12 @@
-import FireplaceImage from "../landing-room/landing-room-images/FirePlace.png";
-import FireplaceGlow from "../landing-room/landing-room-images/FirePlaceGlow.png";
+import FireplaceImage from "./fireplace-images/FirePlace.png";
+import FireplaceGlow from "./fireplace-images/FirePlaceGlow.png";
 import Popup from "../popup/PopUp";
 import "./FirePlace.css";
 import React from "react";
 import { useState } from 'react';
 
 const Fireplace = ({fireplaceMethod}) => {
-  const [buttonPopUp, setButtonPopup] = useState(false);
+  const [showPopup, setButtonPopup] = useState(false);
 
   const fireplaceClick = () => {
     fireplaceMethod(true);
@@ -20,7 +20,7 @@ const Fireplace = ({fireplaceMethod}) => {
         onMouseOver={e => e.currentTarget.src = FireplaceGlow } 
         onMouseOut={e => e.currentTarget.src = FireplaceImage }
       />
-      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+      <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>Place Holder Text.</p>
         </div>
@@ -29,4 +29,4 @@ const Fireplace = ({fireplaceMethod}) => {
   )
 };
 
-export default Fireplace
+export default Fireplace;
