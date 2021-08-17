@@ -1,6 +1,6 @@
 import React from 'react'
 import './PopUp.css'
-import { Container, Row, Col, CloseButton } from "react-bootstrap";
+import { Container, Row, Col, CloseButton, Button } from "react-bootstrap";
 
 function Popup(props) {
   return props.trigger ? (
