@@ -15,6 +15,7 @@ import MirrorGlow from "./landing-room-images/highlighted-mirror.png";
 import Fireplace from "../fireplace/FirePlace";
 import Curtains from "../curtains/Curtains";
 import ChalkOutline from "../chalkoutline/ChalkOutline";
+import BloodyTooth from "./landing-room-images/BloodyTooth.png";
 
 const Mirror = () => {
   const [buttonPopUp, setButtonPopup] = useState(false);
