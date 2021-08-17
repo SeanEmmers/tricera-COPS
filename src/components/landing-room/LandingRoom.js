@@ -108,7 +108,8 @@ const LandingRoom = () => {
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
         <DinoCop />
-        <Door />
+        { show ? <Door/> : null }
+        
         <Jar doorMethod = {setShow}/>
         {show? <Tooth /> : null}
         <SpeechBubble />
