@@ -2,6 +2,8 @@ import FireplaceImage from "../landing-room/landing-room-images/FirePlace.png";
 import FireplaceGlow from "../landing-room/landing-room-images/FirePlaceGlow.png";
 import Popup from "../popup/PopUp";
 import "./FirePlace.css";
+import React from "react";
+import { useState } from 'react';
 
 const Fireplace = ({fireplaceMethod}) => {
   const [buttonPopUp, setButtonPopup] = useState(false);
