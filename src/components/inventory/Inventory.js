@@ -1,8 +1,6 @@
 import React from "react";
 import Popup from "./PopUp";
 import Tooth from "./LandingRoom.js"
-// import { Container, Row, Col } from "react-bootstrap";
-
 
 const Inventory = () => {
 

@@ -1,55 +1,19 @@
 import React from "react";
-import RoomOneImage from "./room-one-images/RoomOneImage.jpeg";
-import DoorGlow from "./room-one-images/DoorOrangeCropped.png";
-import Popup from "./PopUp";
 import { useState } from 'react';
-import JarGlow from "./room-one-images/JarCroppedFinal.png";
-import DoorBasic from "./room-one-images/CroppedDoorFinal.png";
-import JarBasic from "./room-one-images/CroppedJarFinal.png";
-import Cop from "./room-one-images/triceCOP.png";
-import MirrorBasic from "./room-one-images/basic-mirror.png";
-import MirrorGlow from "./room-one-images/highlighted-mirror.png";
 import { Button } from "react-bootstrap";
 import Inventory from "./Inventory.js";
 import BloodyTooth from "./room-one-images/ToothBloody.png";
+import Popup from "../popup/PopUp";
+import SpeechBubble from "../speech-bubble/SpeechBubble";
+import RoomOneImage from "./landing-room-images/RoomOneImage.jpeg";
+import DoorGlow from "./landing-room-images/DoorOrangeCropped.png";
+import JarGlow from "./landing-room-images/JarCroppedFinal.png";
+import DoorBasic from "./landing-room-images/CroppedDoorFinal.png";
+import JarBasic from "./landing-room-images/CroppedJarFinal.png";
+import Cop from "./landing-room-images/triceCOP.png";
+import MirrorBasic from "./landing-room-images/basic-mirror.png";
+import MirrorGlow from "./landing-room-images/highlighted-mirror.png";
 
-class SpeechBubble extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      
-      message: "Hello, I am Tricera-cop",
-     
-    };
-  }
-
-  updateContent = () => {
-    this.setState({
-      message:
-        "We are locked in here, I need your help to escape and catch the killer!",
-    });
-  };
-
-  render() {
-    return (
-      <div className="bubble">
-        {this.state.message}
-        <br />
-        <div className="pointer"></div>
-
-        <div className="small-btn">
-          <Button
-            size="sm"
-            variant="outline-secondary"
-            onClick={this.updateContent}
-          >
-            Next...
-          </Button>
-        </div>
-      </div>
-    );
-  }
-}
 
 const Mirror = () => {
   const [buttonPopUp, setButtonPopup] = useState(false);

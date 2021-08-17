@@ -8,15 +8,15 @@ function Popup(props) {
       <Container>
         <Row>
           <Col></Col>
-          <div className="popup-inner">
-            <button
-              className="close-btn"
-              onClick={() => props.setTrigger(false)}
-            >
-              <CloseButton />{" "}
-            </button>
-            {props.children}
-          </div>
+            <div className="popup-inner">
+              <button
+                className="close-btn"
+                onClick={() => props.setTrigger(false)}
+              >
+                <CloseButton />{" "}
+              </button>
+              {props.children}
+            </div>
         </Row>
       </Container>
     </div>
