@@ -12,8 +12,10 @@ import JarBasic from "./landing-room-images/CroppedJarFinal.png";
 import Cop from "./landing-room-images/triceCOP.png";
 import MirrorBasic from "./landing-room-images/basic-mirror.png";
 import MirrorGlow from "./landing-room-images/highlighted-mirror.png";
+import Fireplace from "../fireplace/FirePlace";
+import Curtains from "../curtains/Curtains";
+import ChalkOutline from "../chalkoutline/ChalkOutline";
 import BloodyTooth from "./landing-room-images/BloodyTooth.png";
-
 
 const Mirror = ({doorMethod}) => {
   const [showPopup, setButtonPopup] = useState(false);
@@ -22,6 +24,7 @@ const Mirror = ({doorMethod}) => {
     setButtonPopup(true);
     doorMethod(true);
   }
+
 
   return(
     <div>
@@ -134,6 +137,8 @@ const LandingRoom = () => {
     <div className="LandingRoom">
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
+        <Curtains curtainsMethod = {setShow}/>
+        <ChalkOutline chalkoutlineMethod = {setShow}/>
         <DinoCop />
         {showDoor ? <Door /> : null}
         <Jar mirrorMethod = {setMirror}/>
@@ -142,6 +147,7 @@ const LandingRoom = () => {
         <SpeechBubbleReuse />
         {showMirror ? <Mirror doorMethod = {setDoor} /> : null}
         <Inventory />
+        <Fireplace fireplaceMethod = {setShow}/>
       </div>
     </div>
   );
