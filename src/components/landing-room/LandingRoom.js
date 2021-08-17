@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from 'react';
-import { Button } from "react-bootstrap";
 import Inventory from "../inventory/Inventory";
 import Popup from "../popup/PopUp";
+import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 import SpeechBubble from "../speech-bubble/SpeechBubble";
 import RoomOneImage from "./landing-room-images/RoomOneImage.jpeg";
 import DoorGlow from "./landing-room-images/DoorOrangeCropped.png";
@@ -16,12 +16,12 @@ import BloodyTooth from "./landing-room-images/BloodyTooth.png";
 
 
 const Mirror = () => {
-  const [buttonPopUp, setButtonPopup] = useState(false);
+  const [showPopup, setButtonPopup] = useState(false);
 
   return(
     <div>
       <img className="mirrorOutline" onClick={() => setButtonPopup(true)} src={MirrorBasic} alt="Mirror" onMouseOver={e => e.currentTarget.src = MirrorGlow } onMouseOut={e => e.currentTarget.src = MirrorBasic }/>
-      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+      <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>Placeholder text</p>
         </div>
@@ -31,7 +31,7 @@ const Mirror = () => {
 }
 
 const Door = () => {
-  const [buttonPopUp, setButtonPopup] = useState(false);
+  const [showPopup, setButtonPopup] = useState(false);
 
   return (
     <div>
@@ -43,7 +43,7 @@ const Door = () => {
         onMouseOut={(e) => (e.currentTarget.src = DoorBasic)}
         alt="OrangeDoor"
       />
-      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+      <Popup show={showPopup} setShow={setButtonPopup}>
         <div className="EndingText">
          
           <button
@@ -65,8 +65,17 @@ const Door = () => {
 }
 
 const DinoCop = () => {
+  const [speechBubble, setSpeechbubble] = useState(false);
+
   return (
-    <img className="cop" src={Cop} alt="TriceraCop" />
+    <div>
+      <img className="cop" src={Cop} alt="TriceraCop" onClick={() => setSpeechbubble(true)}/>
+      <SpeechBubbleReuse display={speechBubble} showBubble={setSpeechbubble}>
+        <div>
+          <p>Don't poke me bitch</p>
+        </div>
+      </SpeechBubbleReuse>
+    </div>
   );
 };
 
@@ -80,7 +89,7 @@ const Tooth = () => {
 };
 
 const Jar = ({doorMethod}) => {
-  const [buttonPopUp, setButtonPopup] = useState(false);
+  const [showPopup, setButtonPopup] = useState(false);
 
   const ClickHandler = () => {
     doorMethod(true);
@@ -90,7 +99,7 @@ const Jar = ({doorMethod}) => {
   return(
     <div>
       <img className="jarOutline" onClick={() => ClickHandler()} src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarGlow } onMouseOut={e => e.currentTarget.src = JarBasic }/>
-      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+      <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor. Curious? Check you inventory!</p>
         </div>
@@ -111,6 +120,7 @@ const LandingRoom = () => {
         <Jar doorMethod = {setShow}/>
         {show? <Tooth /> : null}
         <SpeechBubble />
+        <SpeechBubbleReuse />
         <Mirror />
         <Inventory />
       </div>

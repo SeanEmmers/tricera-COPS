@@ -1,7 +1,8 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, CloseButton } from "react-bootstrap";
 import "./SpeechBubble.css";
 import { useState } from 'react';
+import { propTypes } from "react-bootstrap/esm/Image";
 
 const SpeechBubble = () => {
 
@@ -13,7 +14,7 @@ const SpeechBubble = () => {
       <p> {text} </p>
       <br />
       <div className="pointer"></div>
-      <Button className="close-btn" size="sm" onClick={() => showText(false)} > X </Button>
+      <CloseButton className="close-btn" size="sm" onClick={() => showText(false)} ></CloseButton>
       <div className="small-btn">
         <Button size="sm" variant="outline-secondary" onClick={() => setText("We are locked in here, I need your help to escape and catch the killer!") }>
           Next...
