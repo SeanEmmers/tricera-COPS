@@ -4,13 +4,22 @@ import Popup from "../popup/PopUp";
 import "./FirePlace.css";
 import React from "react";
 import { useState } from 'react';
+import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 
 const Fireplace = ({fireplaceMethod}) => {
   const [showPopup, setButtonPopup] = useState(false);
+  const [speechBubble, setSpeechbubble] = useState(false);
+
+  const bubbleText = () => {
+    return(
+      "Hey look, a letter has appeared"
+    )
+  }
 
   const fireplaceClick = () => {
     fireplaceMethod(true);
     setButtonPopup(true);
+    setSpeechbubble(true);
   };
 
   return(
@@ -22,9 +31,13 @@ const Fireplace = ({fireplaceMethod}) => {
       />
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>Place Holder Text.</p>
+          <p>Inside the dusty fireplace you find a broken 'tooth'</p>
         </div>
       </Popup>
+      <div>
+        <SpeechBubbleReuse display={speechBubble} showBubble={setSpeechbubble} words={bubbleText} >
+        </SpeechBubbleReuse>
+      </div>
     </div>
   )
 };
