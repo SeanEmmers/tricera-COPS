@@ -13,7 +13,7 @@ import JarBasic from "./landing-room-images/CroppedJarFinal.png";
 import Cop from "./landing-room-images/triceCOP.png";
 import MirrorBasic from "./landing-room-images/basic-mirror.png";
 import MirrorGlow from "./landing-room-images/highlighted-mirror.png";
-import BloodyTooth from "./landing-room-images/BloodyTooth.png";
+import Fireplace from "../fireplace/FirePlace";
 
 
 const Mirror = () => {
@@ -114,6 +114,7 @@ const LandingRoom = () => {
         <SpeechBubble />
         <Mirror />
         <Inventory />
+        <Fireplace fireplaceMethod = {setShow}/>
       </div>
     </div>
   );
