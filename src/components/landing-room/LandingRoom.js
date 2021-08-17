@@ -137,8 +137,8 @@ const LandingRoom = () => {
     <div className="LandingRoom">
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
-        <Curtains curtainsMethod = {setShow}/>
-        <ChalkOutline chalkoutlineMethod = {setShow}/>
+        <Curtains curtainsMethod = {setMirror}/>
+        <ChalkOutline chalkoutlineMethod = {setMirror}/>
         <DinoCop />
         {showDoor ? <Door /> : null}
         <Jar mirrorMethod = {setMirror}/>
@@ -147,7 +147,7 @@ const LandingRoom = () => {
         <SpeechBubbleReuse />
         {showMirror ? <Mirror doorMethod = {setDoor} /> : null}
         <Inventory />
-        <Fireplace fireplaceMethod = {setShow}/>
+        <Fireplace fireplaceMethod = {setMirror}/>
       </div>
     </div>
   );
