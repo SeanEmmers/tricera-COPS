@@ -103,12 +103,12 @@ const Jar = ({doorMethod}) => {
 };
 
 const Envelope = (props) => {
-  const [buttonPopUp, setButtonPopup] = useState(false);
+  const [displayingLetter, showLetter] = useState(false);
 
   return(
     <div>
-      <img className="envelopeOutline" onClick={() => setButtonPopup(true)} src={EnvelopeBasic} alt="envelope" onMouseOver={e => e.currentTarget.src = EnvelopeGlow } onMouseOut={e => e.currentTarget.src = EnvelopeBasic }/>
-      <Letter trigger={buttonPopUp} setTrigger={setButtonPopup}>
+      <img className="envelopeOutline" onClick={() => showLetter(true)} src={EnvelopeBasic} alt="envelope" onMouseOver={e => e.currentTarget.src = EnvelopeGlow } onMouseOut={e => e.currentTarget.src = EnvelopeBasic }/>
+      <Letter displayingLetter={displayingLetter} showLetter={showLetter}>
         {props.letterContent}
       </Letter>
     </div>

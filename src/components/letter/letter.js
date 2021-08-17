@@ -3,7 +3,7 @@ import './letter.css'
 import { Container, Row, Col, CloseButton, Button } from "react-bootstrap";
 
 const Letter = (props) => {
-  return props.trigger ? (
+  return props.displayingLetter ? (
     <div className="letter">
       <Container>
         <Row>
@@ -11,7 +11,7 @@ const Letter = (props) => {
             <div className="letter-inner">
               <button
                 className="close-btn"
-                onClick={() => props.setTrigger(false)}
+                onClick={() => props.showLetter(false)}
               >
                 <CloseButton />{" "}
               </button>
