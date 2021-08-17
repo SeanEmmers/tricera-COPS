@@ -17,6 +17,11 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+.close-bubble {
+  visibility: hidden;
+  display: none;
+}
+
 .pointer {
   height: 18px;
   width: 40px;
@@ -34,6 +39,22 @@
   height: 35px;
   position: absolute;
   bottom: 5px;
+  right: 10px;
+  text-align: center;
+  margin-bottom: 3px;
+  /* border: 1px solid black; */
+  font-size: medium;
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+  /* border-radius: 20px;
+  background: #6cb3a6;
+  border: 1.5px solid rgb(0, 0, 0); */
+}
+
+.close-btn {
+  width: 30px;
+  height: 35px;
+  position: absolute;
+  top: 5px;
   right: 10px;
   text-align: center;
   margin-bottom: 3px;
