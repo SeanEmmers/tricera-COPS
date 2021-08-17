@@ -14,6 +14,8 @@ import Door from "../door/Door";
 import DinoCop from "../dino-cop/Dino";
 import Jar from "../jar/Jar";
 import Tooth from "../clues/Tooth";
+import EnvelopeBasic from "./landing-room-images/Envelope.png"
+import EnvelopeGlow from "./landing-room-images/EnvelopeGlow.png"
 
 const Envelope = (props) => {
   const [displayingLetter, showLetter] = useState(false);
