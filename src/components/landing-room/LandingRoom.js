@@ -14,6 +14,7 @@ import Cop from "./landing-room-images/triceCOP.png";
 import MirrorBasic from "./landing-room-images/basic-mirror.png";
 import MirrorGlow from "./landing-room-images/highlighted-mirror.png";
 import Fireplace from "../fireplace/FirePlace";
+import Curtains from "../curtains/Curtains";
 
 
 const Mirror = () => {
@@ -107,8 +108,9 @@ const LandingRoom = () => {
     <div className="LandingRoom">
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
+        <Curtains curtainsMethod = {setShow}/>
         <DinoCop />
-        <Door />
+        { show ? <Door/> : null }
         <Jar doorMethod = {setShow}/>
         {show? <Tooth /> : null}
         <SpeechBubble />
