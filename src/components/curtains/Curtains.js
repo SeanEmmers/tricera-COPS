@@ -1,12 +1,12 @@
-import CurtainsImage from "../landing-room/landing-room-images/Curtains.png";
-import CurtainsGlow from "../landing-room/landing-room-images/CurtainsGlow.png";
+import CurtainsImage from "./curtain-images/Curtains.png";
+import CurtainsGlow from "./curtain-images/CurtainsGlow.png";
 import Popup from "../popup/PopUp";
 import "./Curtains.css";
 import React from "react";
 import { useState } from 'react';
 
 const Curtains = ({curtainsMethod}) => {
-  const [buttonPopUp, setButtonPopup] = useState(false);
+  const [showPopup, setButtonPopup] = useState(false);
 
   const curtainsClick = () => {
     curtainsMethod(true);
@@ -20,7 +20,7 @@ const Curtains = ({curtainsMethod}) => {
         onMouseOver={e => e.currentTarget.src = CurtainsGlow } 
         onMouseOut={e => e.currentTarget.src = CurtainsImage }
       />
-      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+      <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>Placeholder Text.</p>
         </div>

@@ -2,7 +2,6 @@ import React from "react";
 import { Button, CloseButton } from "react-bootstrap";
 import "./SpeechBubble.css";
 import { useState } from 'react';
-import { propTypes } from "react-bootstrap/esm/Image";
 
 const SpeechBubble = () => {
 
