@@ -1,9 +1,10 @@
 import React from 'react'
 import './PopUp.css'
-import { Container, Row, Col, CloseButton, Button } from "react-bootstrap";
+import { Container, Row, Col, CloseButton} from "react-bootstrap";
 
-function Popup(props) {
-  return props.trigger ? (
+
+const Popup = (display) => {
+  return display.show ? (
     <div className="popup">
       <Container>
         <Row>
@@ -11,17 +12,17 @@ function Popup(props) {
             <div className="popup-inner">
               <button
                 className="close-btn"
-                onClick={() => props.setTrigger(false)}
+                onClick={() => display.setShow(false)}
               >
                 <CloseButton />{" "}
               </button>
-              {props.children}
+              {display.children}
             </div>
         </Row>
       </Container>
     </div>
   ) : (
-    ""
+    null
   );
 }
 

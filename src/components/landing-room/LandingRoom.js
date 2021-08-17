@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from 'react';
-import { Button } from "react-bootstrap";
 import Inventory from "../inventory/Inventory";
 import Popup from "../popup/PopUp";
+import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 import SpeechBubble from "../speech-bubble/SpeechBubble";
 import RoomOneImage from "./landing-room-images/RoomOneImage.jpeg";
 import DoorGlow from "./landing-room-images/DoorOrangeCropped.png";
@@ -17,13 +17,19 @@ import Curtains from "../curtains/Curtains";
 import ChalkOutline from "../chalkoutline/ChalkOutline";
 import BloodyTooth from "./landing-room-images/BloodyTooth.png";
 
-const Mirror = () => {
-  const [buttonPopUp, setButtonPopup] = useState(false);
+const Mirror = ({doorMethod}) => {
+  const [showPopup, setButtonPopup] = useState(false);
+
+  const mirrorClick = () =>{
+    setButtonPopup(true);
+    doorMethod(true);
+  }
+
 
   return(
     <div>
-      <img className="mirrorOutline" onClick={() => setButtonPopup(true)} src={MirrorBasic} alt="Mirror" onMouseOver={e => e.currentTarget.src = MirrorGlow } onMouseOut={e => e.currentTarget.src = MirrorBasic }/>
-      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+      <img className="mirrorOutline" onClick={() => mirrorClick()} src={MirrorBasic} alt="Mirror" onMouseOver={e => e.currentTarget.src = MirrorGlow } onMouseOut={e => e.currentTarget.src = MirrorBasic }/>
+      <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>Placeholder text</p>
         </div>
@@ -33,7 +39,7 @@ const Mirror = () => {
 }
 
 const Door = () => {
-  const [buttonPopUp, setButtonPopup] = useState(false);
+  const [showPopup, setButtonPopup] = useState(false);
 
   return (
     <div>
@@ -45,7 +51,7 @@ const Door = () => {
         onMouseOut={(e) => (e.currentTarget.src = DoorBasic)}
         alt="OrangeDoor"
       />
-      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+      <Popup show={showPopup} setShow={setButtonPopup}>
         <div className="EndingText">
          
           <button
@@ -67,8 +73,20 @@ const Door = () => {
 }
 
 const DinoCop = () => {
+  const [speechBubble, setSpeechbubble] = useState(false);
+
+  const bubbleText = () => {
+    return(
+      "Hey, don't poke me bitch"
+    )
+  }
+
   return (
-    <img className="cop" src={Cop} alt="TriceraCop" />
+    <div>
+      <img className="cop" src={Cop} alt="TriceraCop" onClick={() => setSpeechbubble(true)}/>
+      <SpeechBubbleReuse display={speechBubble} showBubble={setSpeechbubble} words={bubbleText}>
+      </SpeechBubbleReuse>
+    </div>
   );
 };
 
@@ -81,28 +99,39 @@ const Tooth = () => {
   )
 };
 
-const Jar = ({doorMethod}) => {
-  const [buttonPopUp, setButtonPopup] = useState(false);
+const Jar = ({mirrorMethod}) => {
+  const [showPopup, setButtonPopup] = useState(false);
+  const [speechBubble, setSpeechbubble] = useState(false);
+
+  const bubbleText = () => {
+    return(
+      'Hmm, pointy...'
+    )
+  }
 
   const ClickHandler = () => {
-    doorMethod(true);
+    mirrorMethod(true);
     setButtonPopup(true);
+    setSpeechbubble(true);
   };
 
   return(
     <div>
       <img className="jarOutline" onClick={() => ClickHandler()} src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarGlow } onMouseOut={e => e.currentTarget.src = JarBasic }/>
-      <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
+      <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor. Curious? Check you inventory!</p>
         </div>
       </Popup>
+      <SpeechBubbleReuse display={speechBubble} showBubble={setSpeechbubble} words={bubbleText}>
+      </SpeechBubbleReuse>
     </div>
   )
 }
 
 const LandingRoom = () => {
-  const [show, setShow] = useState(false)
+  const [showDoor, setDoor] = useState(false);
+  const [showMirror, setMirror] = useState(false);
 
   return (
     <div className="LandingRoom">
@@ -111,11 +140,12 @@ const LandingRoom = () => {
         <Curtains curtainsMethod = {setShow}/>
         <ChalkOutline chalkoutlineMethod = {setShow}/>
         <DinoCop />
-        { show ? <Door/> : null }
-        <Jar doorMethod = {setShow}/>
-        {show? <Tooth /> : null}
+        {showDoor ? <Door /> : null}
+        <Jar mirrorMethod = {setMirror}/>
+        {showMirror ? <Tooth /> : null}
         <SpeechBubble />
-        <Mirror />
+        <SpeechBubbleReuse />
+        {showMirror ? <Mirror doorMethod = {setDoor} /> : null}
         <Inventory />
         <Fireplace fireplaceMethod = {setShow}/>
       </div>
