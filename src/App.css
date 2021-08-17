@@ -117,7 +117,7 @@ body {
   background: #dde3e8;
   top: -1000px;
   left: 0px;
-    z-index: inherit;
+  z-index: inherit;
 }
 
 .tooth-small {
