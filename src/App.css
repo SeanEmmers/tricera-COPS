@@ -109,6 +109,24 @@ body {
     z-index: inherit;
 }
 
+.tooth-small {
+  height: 15%;
+  width: 7%;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.tooth-large {
+  height: 50%;
+  width: 25%;
+  position: absolute;
+  top: 25%;
+  left: 38%;
+  /* border: 2px solid slategray;
+  background-color: slategray; */
+}
+
 /* .popupInner {
   padding: 10px;
 } */

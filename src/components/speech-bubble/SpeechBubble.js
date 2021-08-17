@@ -1,43 +1,26 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import "./SpeechBubble.css";
+import { useState } from 'react';
 
-class SpeechBubble extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      
-      message: "Hello, I am Tricera-cop",
-     
-    };
-  }
+const SpeechBubble = () => {
 
-  updateContent = () => {
-    this.setState({
-      message:
-        "We are locked in here, I need your help to escape and catch the killer!",
-    });
-  };
+  const [ text, setText ] = useState('Hello I am Tricera-cop')
+  const [ show, showText ] = useState(true)
 
-  render() {
-    return (
-      <div className="bubble">
-        {this.state.message}
-        <br />
-        <div className="pointer"></div>
-
-        <div className="small-btn">
-          <Button
-            size="sm"
-            variant="outline-secondary"
-            onClick={this.updateContent}
-          >
-            Next...
-          </Button>
-        </div>
+  return (
+    <div className = {show ? 'bubble' : 'close-bubble'}>
+      <p> {text} </p>
+      <br />
+      <div className="pointer"></div>
+      <Button className="close-btn" size="sm" onClick={() => showText(false)} > X </Button>
+      <div className="small-btn">
+        <Button size="sm" variant="outline-secondary" onClick={() => setText("We are locked in here, I need your help to escape and catch the killer!") }>
+          Next...
+        </Button>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default SpeechBubble;
