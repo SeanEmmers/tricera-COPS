@@ -15,12 +15,17 @@ import MirrorGlow from "./landing-room-images/highlighted-mirror.png";
 import BloodyTooth from "./landing-room-images/BloodyTooth.png";
 
 
-const Mirror = () => {
+const Mirror = ({doorMethod}) => {
   const [showPopup, setButtonPopup] = useState(false);
+
+  const mirrorClick = () =>{
+    setButtonPopup(true);
+    doorMethod(true);
+  }
 
   return(
     <div>
-      <img className="mirrorOutline" onClick={() => setButtonPopup(true)} src={MirrorBasic} alt="Mirror" onMouseOver={e => e.currentTarget.src = MirrorGlow } onMouseOut={e => e.currentTarget.src = MirrorBasic }/>
+      <img className="mirrorOutline" onClick={() => mirrorClick()} src={MirrorBasic} alt="Mirror" onMouseOver={e => e.currentTarget.src = MirrorGlow } onMouseOut={e => e.currentTarget.src = MirrorBasic }/>
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>Placeholder text</p>
@@ -67,13 +72,16 @@ const Door = () => {
 const DinoCop = () => {
   const [speechBubble, setSpeechbubble] = useState(false);
 
+  const bubbleText = () => {
+    return(
+      "Hey, don't poke me bitch"
+    )
+  }
+
   return (
     <div>
       <img className="cop" src={Cop} alt="TriceraCop" onClick={() => setSpeechbubble(true)}/>
-      <SpeechBubbleReuse display={speechBubble} showBubble={setSpeechbubble}>
-        <div>
-          <p>Don't poke me bitch</p>
-        </div>
+      <SpeechBubbleReuse display={speechBubble} showBubble={setSpeechbubble} words={bubbleText}>
       </SpeechBubbleReuse>
     </div>
   );
@@ -88,12 +96,21 @@ const Tooth = () => {
   )
 };
 
-const Jar = ({doorMethod}) => {
+const Jar = ({mirrorMethod}) => {
   const [showPopup, setButtonPopup] = useState(false);
+  const [speechBubble, setSpeechbubble] = useState(false);
+
+  const bubbleText = () => {
+    return(
+      'hello'
+    )
+  }
 
   const ClickHandler = () => {
-    doorMethod(true);
+    mirrorMethod(true);
     setButtonPopup(true);
+    setSpeechbubble(true);
+    // bubbleText('Hmmm, pointy...')
   };
 
   return(
@@ -104,24 +121,27 @@ const Jar = ({doorMethod}) => {
           <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor. Curious? Check you inventory!</p>
         </div>
       </Popup>
+      <SpeechBubbleReuse display={speechBubble} showBubble={setSpeechbubble} words={bubbleText}>
+      </SpeechBubbleReuse>
     </div>
   )
 }
 
 const LandingRoom = () => {
-  const [show, setShow] = useState(false)
+  const [showDoor, setDoor] = useState(false);
+  const [showMirror, setMirror] = useState(false);
 
   return (
     <div className="LandingRoom">
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
         <DinoCop />
-        <Door />
-        <Jar doorMethod = {setShow}/>
-        {show? <Tooth /> : null}
+        {showDoor ? <Door /> : null}
+        <Jar mirrorMethod = {setMirror}/>
+        {showMirror ? <Tooth /> : null}
         <SpeechBubble />
         <SpeechBubbleReuse />
-        <Mirror />
+        {showMirror ? <Mirror doorMethod = {setDoor} /> : null}
         <Inventory />
       </div>
     </div>

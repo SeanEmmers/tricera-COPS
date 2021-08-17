@@ -24,4 +24,4 @@ const SpeechBubble = () => {
   );
 }
 
-export default SpeechBubble;
+export default SpeechBubble
