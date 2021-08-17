@@ -5,7 +5,6 @@ import Inventory from "../inventory/Inventory";
 import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 import SpeechBubble from "../speech-bubble/SpeechBubble";
 import Letter from "../letter/letter"
-import { props } from "bluebird";
 import Fireplace from "../fireplace/FirePlace";
 import Curtains from "../curtains/Curtains";
 import Mirror from "../mirror/Mirror";
@@ -14,8 +13,9 @@ import Door from "../door/Door";
 import DinoCop from "../dino-cop/Dino";
 import Jar from "../jar/Jar";
 import Tooth from "../clues/Tooth";
-import EnvelopeBasic from "./landing-room-images/Envelope.png"
-import EnvelopeGlow from "./landing-room-images/EnvelopeGlow.png"
+import EnvelopeBasic from "./landing-room-images/Envelope.png";
+import EnvelopeGlow from "./landing-room-images/EnvelopeGlow.png";
+import Horn from "../clues/Horn";
 
 const Envelope = (props) => {
   const [displayingLetter, showLetter] = useState(false);
@@ -44,6 +44,7 @@ const LetterOneContent = () => {
 const LandingRoom = () => {
   const [showDoor, setDoor] = useState(false);
   const [showMirror, setMirror] = useState(false);
+  const [showEnvelopeOne, setEnvelopeOne] = useState(false);
 
   return (
     <div className="LandingRoom">
@@ -59,8 +60,10 @@ const LandingRoom = () => {
         <SpeechBubbleReuse />
         {showMirror ? <Mirror doorMethod = {setDoor} /> : null}
         <Inventory />
-        <Envelope id="envelope1" letterContent= {<LetterOneContent />} />
-        <Fireplace fireplaceMethod = {setMirror}/>
+        {showEnvelopeOne ? <Envelope id="envelope1" letterContent= {<LetterOneContent />} /> : null }        
+        <Fireplace fireplaceMethod = {setEnvelopeOne}/>
+        {showEnvelopeOne ? <Horn /> : null}
+
       </div>
     </div>
   );
