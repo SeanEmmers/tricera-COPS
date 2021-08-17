@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from 'react';
 import { Button } from "react-bootstrap";
-import Inventory from "./Inventory.js";
-import BloodyTooth from "./room-one-images/ToothBloody.png";
+import Inventory from "../inventory/Inventory";
+import BloodyTooth from "./landing-room-images/ToothBloody.png";
 import Popup from "../popup/PopUp";
 import SpeechBubble from "../speech-bubble/SpeechBubble";
 import RoomOneImage from "./landing-room-images/RoomOneImage.jpeg";

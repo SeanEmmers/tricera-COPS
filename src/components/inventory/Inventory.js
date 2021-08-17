@@ -1,6 +1,4 @@
 import React from "react";
-import Popup from "./PopUp";
-import Tooth from "./LandingRoom.js"
 
 const Inventory = () => {
 
