@@ -15,7 +15,11 @@ const Fireplace = ({fireplaceMethod}) => {
 
   return(
     <div>
-      <img className="fireplaceobject" onClick={() => fireplaceClick()} src={FireplaceImage} alt="Fireplace" onMouseOver={e => e.currentTarget.src = FireplaceGlow } onMouseOut={e => e.currentTarget.src = FireplaceImage }/>
+      <img className="fireplaceobject" onClick={() => fireplaceClick()} 
+        src={FireplaceImage} alt="Fireplace" 
+        onMouseOver={e => e.currentTarget.src = FireplaceGlow } 
+        onMouseOut={e => e.currentTarget.src = FireplaceImage }
+      />
       <Popup trigger={buttonPopUp} setTrigger={setButtonPopup}>
         <div>
           <p>Place Holder Text.</p>
