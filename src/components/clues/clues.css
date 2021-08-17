@@ -2,6 +2,8 @@
   height: 15%;
   width: 7%;
   position: absolute;
+  top: 0%;
+  right: 1%;
 }
 
 .tooth-large {
@@ -15,12 +17,11 @@
 }
 
 .horn-small {
-  height: 15%;
-  width: 7%;
+  height: 17%;
+  width: 9%;
   position: absolute;
-  top: 15%;
-  /* right: 0%; */
-  left: 0%;
+  top: 0%;
+  right: 7%;
 }
 
 .horn-large {
