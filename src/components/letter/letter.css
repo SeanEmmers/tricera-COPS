@@ -1,0 +1,32 @@
+.letter {
+  position: absolute;
+  z-index: 1000;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter-inner {
+  position: relative;
+  padding: 32px;
+  width: 50%;
+  top: 6px;
+  right: 16px;
+  
+  font-family: cursive;
+  font-weight: 525;
+  background-color: #f2eecb;
+  border-radius: 1em;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+}

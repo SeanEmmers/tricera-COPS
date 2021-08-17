@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from 'react';
 import Inventory from "../inventory/Inventory";
 import Popup from "../popup/PopUp";
+import Letter from "../letter/letter"
 import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 import SpeechBubble from "../speech-bubble/SpeechBubble";
 import RoomOneImage from "./landing-room-images/RoomOneImage.jpeg";
@@ -12,6 +13,10 @@ import JarBasic from "./landing-room-images/CroppedJarFinal.png";
 import Cop from "./landing-room-images/triceCOP.png";
 import MirrorBasic from "./landing-room-images/basic-mirror.png";
 import MirrorGlow from "./landing-room-images/highlighted-mirror.png";
+import EnvelopeBasic from "./landing-room-images/Envelope.png";
+import EnvelopeGlow from "./landing-room-images/EnvelopeGlow.png";
+import BloodyTooth from "./landing-room-images/BloodyTooth.png";
+import { props } from "bluebird";
 import Fireplace from "../fireplace/FirePlace";
 import Curtains from "../curtains/Curtains";
 import ChalkOutline from "../chalkoutline/ChalkOutline";
@@ -24,7 +29,6 @@ const Mirror = ({doorMethod}) => {
     setButtonPopup(true);
     doorMethod(true);
   }
-
 
   return(
     <div>
@@ -127,7 +131,31 @@ const Jar = ({mirrorMethod}) => {
       </SpeechBubbleReuse>
     </div>
   )
-}
+};
+
+const Envelope = (props) => {
+  const [displayingLetter, showLetter] = useState(false);
+
+  return(
+    <div>
+      <img className="envelopeOutline" onClick={() => showLetter(true)} src={EnvelopeBasic} alt="envelope" onMouseOver={e => e.currentTarget.src = EnvelopeGlow } onMouseOut={e => e.currentTarget.src = EnvelopeBasic }/>
+      <Letter displayingLetter={displayingLetter} showLetter={showLetter}>
+        {props.letterContent}
+      </Letter>
+    </div>
+  );
+};
+
+const LetterOneContent = () => { 
+  return(
+    <div>
+      <p>Dear Andy,</p>
+      <p>This is letter one</p>
+      <p>Wishing you the best,</p>
+      <p>Tiffany</p>
+    </div>
+  );
+};
 
 const LandingRoom = () => {
   const [showDoor, setDoor] = useState(false);
@@ -147,6 +175,7 @@ const LandingRoom = () => {
         <SpeechBubbleReuse />
         {showMirror ? <Mirror doorMethod = {setDoor} /> : null}
         <Inventory />
+        <Envelope id="envelope1" letterContent= {<LetterOneContent />} />
         <Fireplace fireplaceMethod = {setMirror}/>
       </div>
     </div>
