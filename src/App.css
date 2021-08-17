@@ -51,6 +51,17 @@ body {
   outline: transparent;
 
 }
+
+.envelopeOutline{
+  height: 3%;
+  width: 4.5%;
+  position: absolute;
+  top: 70%;
+  right: 65%;
+  transform: rotate(0deg) skewX(-50deg) skewY(0deg);
+  border: none;
+  outline: transparent;
+}
 /* 
 #OrangeLine:checked.ObjectOutline {
   height: 100vh;

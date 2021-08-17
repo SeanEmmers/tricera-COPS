@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Button } from "react-bootstrap";
 import Inventory from "../inventory/Inventory";
 import Popup from "../popup/PopUp";
+import Letter from "../letter/letter"
 import SpeechBubble from "../speech-bubble/SpeechBubble";
 import RoomOneImage from "./landing-room-images/RoomOneImage.jpeg";
 import DoorGlow from "./landing-room-images/DoorOrangeCropped.png";
@@ -12,8 +13,10 @@ import JarBasic from "./landing-room-images/CroppedJarFinal.png";
 import Cop from "./landing-room-images/triceCOP.png";
 import MirrorBasic from "./landing-room-images/basic-mirror.png";
 import MirrorGlow from "./landing-room-images/highlighted-mirror.png";
+import EnvelopeBasic from "./landing-room-images/Envelope.png";
+import EnvelopeGlow from "./landing-room-images/EnvelopeGlow.png";
 import BloodyTooth from "./landing-room-images/BloodyTooth.png";
-
+import { props } from "bluebird";
 
 const Mirror = () => {
   const [buttonPopUp, setButtonPopup] = useState(false);
@@ -97,7 +100,31 @@ const Jar = ({doorMethod}) => {
       </Popup>
     </div>
   )
-}
+};
+
+const Envelope = (props) => {
+  const [buttonPopUp, setButtonPopup] = useState(false);
+
+  return(
+    <div>
+      <img className="envelopeOutline" onClick={() => setButtonPopup(true)} src={EnvelopeBasic} alt="envelope" onMouseOver={e => e.currentTarget.src = EnvelopeGlow } onMouseOut={e => e.currentTarget.src = EnvelopeBasic }/>
+      <Letter trigger={buttonPopUp} setTrigger={setButtonPopup}>
+        {props.letterContent}
+      </Letter>
+    </div>
+  );
+};
+
+const LetterOneContent = () => { 
+  return(
+    <div>
+      <p>Dear Andy,</p>
+      <p>This is letter one</p>
+      <p>Wishing you the best,</p>
+      <p>Tiffany</p>
+    </div>
+  );
+};
 
 const LandingRoom = () => {
   const [show, setShow] = useState(false)
@@ -113,6 +140,7 @@ const LandingRoom = () => {
         <SpeechBubble />
         <Mirror />
         <Inventory />
+        <Envelope id="envelope1" letterContent= {<LetterOneContent />} />
       </div>
     </div>
   );
