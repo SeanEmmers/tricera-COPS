@@ -18,7 +18,7 @@ const Home = () => {
               />
               <br />
               <br />
-              <div className="play">
+              <div className="playButton">
                 <Button variant="danger" size="lg">
                   Let's Play, Bitch!!
                 </Button>
@@ -30,6 +30,5 @@ const Home = () => {
     </div>
   );
 }
-
 
 export default Home;

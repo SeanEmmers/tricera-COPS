@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar,Container} from "react-bootstrap";
 import {Route, Link} from 'react-router-dom'
 import Home from "./components/homepage/home.js"
+import Hat from "./components/homepage/HomeImage/TheHatfull.png"
 
 
 function App() {
@@ -23,9 +24,8 @@ function App() {
       <Navbar fixed="top" class="navbar" variant="dark">
         <Container>
           <Navbar.Brand href="/">
-            <img
-              
-              src="https://www.maxpixel.net/static/photo/1x/Dino-Cartoon-Triceratops-Dinosaur-Green-Portrait-306331.png"
+            <img              
+              src={Hat}
               width="30"
               height="30"
               className="d-inline-block align-top"
@@ -44,7 +44,6 @@ function App() {
         <Route exact path="/play" component={LandingRoom} />
         <br />
         <br />
-        {/* <LandingRoom /> */}
       </Container>
     </div>
   );
