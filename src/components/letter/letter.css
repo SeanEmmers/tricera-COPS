@@ -1,4 +1,4 @@
-.popup {
+.letter {
   position: absolute;
   z-index: 1000;
 
@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.popup-inner {
+.letter-inner {
   position: relative;
   padding: 32px;
   width: 50%;
