@@ -20,7 +20,10 @@
   top: 6px;
   right: 16px;
   
-  background-color: white;
+  font-family: cursive;
+  font-weight: 525;
+  background-color: #f2eecb;
+  border-radius: 1em;
 }
 
 .close-btn {
