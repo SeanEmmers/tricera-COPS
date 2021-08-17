@@ -4,7 +4,7 @@ import LandingRoom from "./components/landing-room/LandingRoom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar} from "react-bootstrap";
 import {Container, Row, Col} from "react-bootstrap";
-import Inventory from "./components/inventory/Inventory";
+
 
 function App() {
  
@@ -28,18 +28,7 @@ function App() {
       <Container>
         <br />
         <br />
-        <Row>
-          <Col lg="2">
-           
-            <Inventory />
-          </Col>
-
-          <Col>
-            <LandingRoom />
-          </Col>
-        </Row>
-        <br />
-        <br />
+        <LandingRoom />
       </Container>
     </div>
   );

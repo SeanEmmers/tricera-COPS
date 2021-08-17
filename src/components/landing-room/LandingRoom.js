@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from 'react';
 import RoomOneImage from "./landing-room-images/RoomOneImage.jpeg";
-import Inventory from "../inventory/Inventory";
 import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 import SpeechBubble from "../speech-bubble/SpeechBubble";
 import Letter from "../letter/letter"
@@ -59,7 +58,7 @@ const LandingRoom = () => {
         <SpeechBubble />
         <SpeechBubbleReuse />
         {showMirror ? <Mirror doorMethod = {setDoor} /> : null}
-        <Inventory />
+        
         {showEnvelopeOne ? <Envelope id="envelope1" letterContent= {<LetterOneContent />} /> : null }        
         <Fireplace fireplaceMethod = {setEnvelopeOne}/>
         {showEnvelopeOne ? <Horn /> : null}
