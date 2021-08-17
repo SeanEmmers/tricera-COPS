@@ -14,7 +14,7 @@ import MirrorBasic from "./landing-room-images/basic-mirror.png";
 import MirrorGlow from "./landing-room-images/highlighted-mirror.png";
 import Fireplace from "../fireplace/FirePlace";
 import Curtains from "../curtains/Curtains";
-
+import ChalkOutline from "../chalkoutline/ChalkOutline";
 
 const Mirror = () => {
   const [buttonPopUp, setButtonPopup] = useState(false);
@@ -108,6 +108,7 @@ const LandingRoom = () => {
       <div className="parent">
         <img className="backgroundImage" src={RoomOneImage} alt="TriceraCop" />
         <Curtains curtainsMethod = {setShow}/>
+        <ChalkOutline chalkoutlineMethod = {setShow}/>
         <DinoCop />
         { show ? <Door/> : null }
         <Jar doorMethod = {setShow}/>
