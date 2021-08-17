@@ -102,7 +102,7 @@ const Jar = ({mirrorMethod}) => {
 
   const bubbleText = () => {
     return(
-      'hello'
+      'Hmm, pointy...'
     )
   }
 
@@ -110,7 +110,6 @@ const Jar = ({mirrorMethod}) => {
     mirrorMethod(true);
     setButtonPopup(true);
     setSpeechbubble(true);
-    // bubbleText('Hmmm, pointy...')
   };
 
   return(

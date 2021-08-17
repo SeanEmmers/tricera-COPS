@@ -4,6 +4,7 @@ import "./SpeechBubble.css";
 
 const SpeechBubbleReuse = (text) => {
 
+  
   return text.display ? (
     <div className = 'bubble'>
       <p>{text.words()}</p>
