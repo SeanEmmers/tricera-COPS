@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3000;
 }
 
 .popup-inner {
@@ -21,9 +22,11 @@
   right: 16px;
   
   background-color: white;
+  z-index: 3000;
 }
 
 .close-btn {
   background: none;
   border: none;
+  z-index: 3000;
 }

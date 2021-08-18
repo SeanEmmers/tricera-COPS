@@ -22,6 +22,10 @@ import LetterFourContent from "../envelopes/LetterFourContent";
 import EnvelopeFive from "../envelopes/EnvelopeFive";
 import EnvelopeSix from "../envelopes/EnvelopeSix";
 import EnvelopeSeven from "../envelopes/EnvelopeSeven";
+import Tiffany from "../suspects/Tiffany";
+import Andy from "../suspects/Andy";
+import DinoSuspect from "../dino-cop/DinoSuspect";
+import Key from "../clues/Key";
 
 const LandingRoom = () => {
   const [showEnvelopeOne, setEnvelopeOne] = useState(false);
@@ -33,7 +37,10 @@ const LandingRoom = () => {
   const [showCurtains, setCurtains] = useState(false);
   const [showNoteSevenAndFootprint, setNoteSevenAndFootprint] = useState(false);
   const [showChalkOutline, setChalkOutline] = useState(false);
+  const [showSuspects, setShowSuspects] = useState(false);
+  const [showDinoSuspect, setShowDino] = useState(false);
   const [showDoor, setShowDoor] = useState(false);
+  const [showKey, setKey] = useState(false);
 
   return (
     <div className="LandingRoom">
@@ -53,8 +60,12 @@ const LandingRoom = () => {
         { showCurtains ? <Curtains curtainMethod = {setNoteSevenAndFootprint} /> : null }
         { showNoteSevenAndFootprint ? <Footprint/> : null }
         { showNoteSevenAndFootprint ? <EnvelopeSeven showOutline = {setChalkOutline}/> : null }
-        { showChalkOutline ? <ChalkOutline showDoor = {setShowDoor} /> : null }
+        { showChalkOutline ? <ChalkOutline showDinoSuspect = {setShowDino} showSuspects = {setShowSuspects} /> : null }
+        { showSuspects ? <Tiffany/> : null }
+        { showSuspects ? <Andy/> : null }
+        { showDinoSuspect ? <DinoSuspect showKey = {setKey} showSuspects = {setShowSuspects} showDoor = {setShowDoor}/> : null }
         { showDoor ? <Door /> : null }
+        { showKey ? <Key/> : null }
         <DinoCop />
         <SpeechBubble />
         <SpeechBubbleReuse />       

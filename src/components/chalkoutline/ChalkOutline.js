@@ -1,25 +1,18 @@
 import ChalkOutlineImage from "./chalkoutline-images/ChalkOutline.png";
 import ChalkOutlineGlow from ".//chalkoutline-images/ChalkOutlineGlow.png";
-import Popup from "../popup/PopUp";
 import "./ChalkOutline.css";
 import React from "react";
+import Popup from "../popup/PopUp";
 import { useState } from 'react';
 
-const ChalkOutline = ({showDoor}) => {
+const ChalkOutline = (props) => {
   const [showPopup, setButtonPopup] = useState(false);
 
   const chalkoutlineClick = () => {
+    props.showSuspects(true);
+    props.showDinoSuspect(true);
     setButtonPopup(true);
   };
-
-  const winningClick = () => {
-    showDoor(true);
-    window.alert('You win!!')
-  }
-
-  const losingClick = () => {
-    window.alert("You lose, try again!")
-  }
 
   return(
     <div>
@@ -28,30 +21,9 @@ const ChalkOutline = ({showDoor}) => {
         onMouseOver={e => e.currentTarget.src = ChalkOutlineGlow } 
         onMouseOut={e => e.currentTarget.src = ChalkOutlineImage }
       />
-      <Popup show={showPopup} setShow={setButtonPopup}>
+       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>So who is the killer?</p>
-          <div className="EndingText">
-         
-          <button
-            className="popup-btn"
-            onClick={() => losingClick()}
-          >
-            Tiffany is the killer?
-          </button>
-          <button
-            className="popup-btn"
-            onClick={() => losingClick()}
-          >
-            Andy is the killer?
-          </button>
-          <button
-            className="popup-btn"
-            onClick={() => winningClick()}
-          >
-            Tricera-cop is the killer?
-          </button>
-        </div>
+          <p>It is time to decide who you think killed Priya, click on your choice.</p>
         </div>
       </Popup>
     </div>
