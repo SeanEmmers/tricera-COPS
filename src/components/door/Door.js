@@ -5,6 +5,7 @@ import DoorGlow from "./door-images/DoorOrangeCropped.png";
 import DoorBasic from "./door-images/CroppedDoorFinal.png";
 import "./Door.css";
 import { Link } from 'react-router-dom'
+import { Button, CloseButton } from "react-bootstrap";
 
 const Door = () => {
   const [showPopup, setButtonPopup] = useState(false);
@@ -24,7 +25,7 @@ const Door = () => {
           <p> Congratulations, you caught the killer and saved Dinoville !! </p>
           <p> Thank you for playing! </p>
             <Link to = '/about'>
-            <button> About us :) </button>
+            <Button> About us :) </Button>
             </Link>
         </div>
       </LosingPopup>
