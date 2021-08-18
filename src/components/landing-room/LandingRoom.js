@@ -12,6 +12,7 @@ import DinoCop from "../dino-cop/Dino";
 import Jar from "../jar/Jar";
 import Tooth from "../clues/Tooth";
 import Horn from "../clues/Horn";
+import Footprint from "../clues/Footprint";
 import EnvelopeOne from "../envelopes/EnvelopeOne";
 import EnvelopeTwo from "../envelopes/EnvelopeTwo";
 import LetterTwoContent from "../envelopes/LetterTwoContent";
@@ -19,8 +20,8 @@ import EnvelopeThree from "../envelopes/EnvelopeThree";
 import EnvelopeFour from "../envelopes/EnvelopeFour";
 import LetterFourContent from "../envelopes/LetterFourContent";
 import EnvelopeFive from "../envelopes/EnvelopeFive";
-import LetterSixContent from "../envelopes/LetterSixContent";
 import EnvelopeSix from "../envelopes/EnvelopeSix";
+import EnvelopeSeven from "../envelopes/EnvelopeSeven";
 
 const LandingRoom = () => {
   const [showEnvelopeOne, setEnvelopeOne] = useState(false);
@@ -28,8 +29,11 @@ const LandingRoom = () => {
   const [showEnvelopeThree, setEnvelopeThree] = useState(false);
   const [noteFourAndMirror, setNoteFourAndMirror] = useState(false);
   const [showEnvelopeFive, setEnvelopeFive] = useState(false); 
-  const [noteSixAndCurtain, setNoteSixAndCurtain] = useState(false);
+  const [noteSix, setNoteSix] = useState(false);
+  const [showCurtains, setCurtains] = useState(false);
+  const [showNoteSevenAndFootprint, setNoteSevenAndFootprint] = useState(false);
   const [showChalkOutline, setChalkOutline] = useState(false);
+  const [showDoor, setShowDoor] = useState(false);
 
   return (
     <div className="LandingRoom">
@@ -44,11 +48,13 @@ const LandingRoom = () => {
         { showEnvelopeThree ? <EnvelopeThree letterFour = {setNoteFourAndMirror}/> : null }
         { noteFourAndMirror ? <EnvelopeFour letterContent = {<LetterFourContent/>} /> : null }
         { noteFourAndMirror ? <Mirror mirrorMethod = {setEnvelopeFive}/> : null}
-        { showEnvelopeFive ? <EnvelopeFive letterSix = {setNoteSixAndCurtain} /> : null }
-        { noteSixAndCurtain ? <EnvelopeSix letterContent = {<LetterSixContent/>} /> : null }
-        { noteSixAndCurtain ? <Curtains curtainMethod = {setChalkOutline} /> : null }
-        { showChalkOutline ? <ChalkOutline/> : null }
-        { noteSixAndCurtain ? <Door /> : null }
+        { showEnvelopeFive ? <EnvelopeFive letterSix = {setNoteSix} /> : null }
+        { noteSix ? <EnvelopeSix showCurtains = {setCurtains} /> : null }
+        { showCurtains ? <Curtains curtainMethod = {setNoteSevenAndFootprint} /> : null }
+        { showNoteSevenAndFootprint ? <Footprint/> : null }
+        { showNoteSevenAndFootprint ? <EnvelopeSeven showOutline = {setChalkOutline}/> : null }
+        { showChalkOutline ? <ChalkOutline showDoor = {setShowDoor} /> : null }
+        { showDoor ? <Door /> : null }
         <DinoCop />
         <SpeechBubble />
         <SpeechBubbleReuse />       
@@ -58,19 +64,3 @@ const LandingRoom = () => {
 };
 
 export default LandingRoom;
-
-// const LetterOneSpeechBubble = () => {
-//   const [speechBubble, setSpeechbubble] = useState(true);
-
-//   const bubbleText = () => {
-//     return(
-//       "Hey look a letter, you should read it..."
-//     )
-//   }
-//   return(
-//     <div>
-//        <SpeechBubbleReuse display={speechBubble} showBubble={setSpeechbubble} words={bubbleText}>
-//       </SpeechBubbleReuse>
-//     </div>
-//   )
-// }

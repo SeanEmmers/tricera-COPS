@@ -6,36 +6,37 @@ import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 import Letter from "../letter/Letter";
 import "./envelope.css";
 
-const EnvelopeSix = ({showCurtains}) => {
+const EnvelopeSeven = ({showOutline}) => {
   const [displayingLetter, showLetter] = useState(false);
   const [speechBubble, setSpeechbubble] = useState(false);
 
   const bubbleText = () => {
     return(
-      "Pff, useless! Take a look elswhere in the room, there must be more clues!"
+      'then it is time to decide who the killer is, I think it is clear!'
     )
-  }
-
-  const letterContent = () => {
-    return(
-      <div>
-      <p>Hello sexy dinoboy,</p>
-      <p>I love your hat</p>
-      <p>pls cum and put me in cuffs ;) </p>
-      <p>Priya xoxox</p>
-    </div>
-    );
   }
 
   const clickHandler = () => {
     showLetter(true);
     setSpeechbubble(true);
-    showCurtains(true);
+    showOutline(true);
+  }
+  
+  const letterContent = () => {
+    return(
+      <div>
+        <p>Dear Andy,</p>
+        <p>I am worried about Priya</p>
+        <p>She is rambling about her life being controlled by six naked monkey</p>
+        <p>I think she needs to lay off the dino sauce</p>
+        <p>Tiffany</p>
+      </div>
+    );
   }
 
   return(
     <div>
-      <img className="envelopeOutline" onClick={() => clickHandler()} src={EnvelopeBasic} alt="envelope" onMouseOver={e => e.currentTarget.src = EnvelopeGlow } onMouseOut={e => e.currentTarget.src = EnvelopeBasic }/>
+      <img className="envelopeOutline" id="envelopeSeven" onClick={() => clickHandler()} src={EnvelopeBasic} alt="envelope" onMouseOver={e => e.currentTarget.src = EnvelopeGlow } onMouseOut={e => e.currentTarget.src = EnvelopeBasic }/>
       <Letter displayingLetter={displayingLetter} showLetter={showLetter}>
         {letterContent()}
       </Letter>
@@ -45,4 +46,4 @@ const EnvelopeSix = ({showCurtains}) => {
   );
 }
 
-export default EnvelopeSix;
+export default EnvelopeSeven;

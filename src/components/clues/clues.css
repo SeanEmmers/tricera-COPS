@@ -33,3 +33,21 @@
   background: rgba(255, 255, 255, 0.803);
   border: 2px solid black;
 }
+
+.footprint-small {
+  height: 17%;
+  width: 9%;
+  position: absolute;
+  top: 0%;
+  right: 15%;
+}
+
+.footprint-large {
+  height: 50%;
+  width: 25%;
+  position: absolute;
+  top: 25%;
+  left: 38%;
+  background: rgba(255, 255, 255, 0.803);
+  border: 2px solid black;
+}
