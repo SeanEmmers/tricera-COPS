@@ -20,8 +20,9 @@ const EnvelopeOne = ({letterTwo}) => {
     return(
       <div>
         <p>Dear Andy,</p>
-        <p>This is letter one</p>
-        <p>Wishing you the best,</p>
+        <p>I am worried about Priya. She hasn't been herself lately, she's hardly been present in the office and seems very distracted. I can't help but think that there is something going on with her. Maybe I'm just overthinking this but in the 20 years I've known her I've never seen her be so aloof like this.</p>
+        <p>Either way, I hope the two of you can still come over for lunch this Sunday, I'll be making vegetarian food for you guys, of course.</p>
+        <p>Wishing you both the best,</p>
         <p>Tiffany</p>
       </div>
     );
