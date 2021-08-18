@@ -1,5 +1,5 @@
 import React from "react";
-import FootPrints from "./clue-images/Footprint.png";
+import FootPrints from "./clue-images/FootPrint.png";
 import "./clues.css";
 
 const Footprint = () => {
