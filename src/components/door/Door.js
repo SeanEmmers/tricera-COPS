@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from 'react';
-import Popup from "../popup/PopUp";
+import LosingPopup from "../popup/LosingPopUp";
 import DoorGlow from "./door-images/DoorOrangeCropped.png";
 import DoorBasic from "./door-images/CroppedDoorFinal.png";
 import "./Door.css";
+import { Link } from 'react-router-dom'
 
 const Door = () => {
   const [showPopup, setButtonPopup] = useState(false);
@@ -18,12 +19,15 @@ const Door = () => {
         onMouseOut={(e) => (e.currentTarget.src = DoorBasic)}
         alt="OrangeDoor"
       />
-      <Popup show={showPopup} setShow={setButtonPopup}>
+      <LosingPopup show={showPopup} setShow={setButtonPopup}>
         <div className="EndingText">
           <p> Congratulations, you caught the killer and saved Dinoville !! </p>
-          <button> Play again? </button>
+          <p> Thank you for playing! </p>
+            <Link to = '/about'>
+            <button> About us :) </button>
+            </Link>
         </div>
-      </Popup>
+      </LosingPopup>
     </div>
   );
 }
