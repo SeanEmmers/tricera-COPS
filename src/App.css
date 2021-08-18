@@ -56,7 +56,6 @@ body {
   height: auto;
   width: 45%;
   position: absolute;
-  /* min-width: 200px; */
   background: #dde3e8;
   display: block;
   margin: 30px;
@@ -64,7 +63,6 @@ body {
   border-radius: 20px;
   border: 1px solid black;
   bottom: 100px;
-  /* left: 160px; */
   left: 20%;
   font-size: 1rem;
   text-align: center;
