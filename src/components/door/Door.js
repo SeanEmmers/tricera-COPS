@@ -20,19 +20,8 @@ const Door = () => {
       />
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div className="EndingText">
-         
-          <button
-            className="popup-btn"
-            onClick={() => window.alert("You win!!")}
-          >
-            T-Rex is the killer?
-          </button>
-          <button
-            className="popup-btn"
-            onClick={() => window.alert("You lose!!")}
-          >
-            Asteroid is the killer?
-          </button>
+          <p> Congratulations, you caught the killer and saved Dinoville !! </p>
+          <button> Play again? </button>
         </div>
       </Popup>
     </div>
