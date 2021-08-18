@@ -5,7 +5,7 @@ import "./ChalkOutline.css";
 import React from "react";
 import { useState } from 'react';
 
-const ChalkOutline = () => {
+const ChalkOutline = ({showDoor}) => {
   const [buttonPopUp, setButtonPopup] = useState(false);
 
   const chalkoutlineClick = () => {
