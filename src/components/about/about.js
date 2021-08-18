@@ -63,7 +63,7 @@ const About = () => {
             <Card className="cards">
               <Card.Img variant="top" src={JooMin} />
               <Card.Body>
-                <Card.Title>JooMin (deceased) </Card.Title>
+                <Card.Title>JooMin</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
