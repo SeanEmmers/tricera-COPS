@@ -4,20 +4,21 @@ import Popup from "../popup/PopUp";
 import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 import JarGlow from "./jar-images/JarCroppedFinal.png";
 import JarBasic from "./jar-images/CroppedJarFinal.png";
+import Letter from "../letter/Letter";
 import "./Jar.css";
 
-const Jar = ({mirrorMethod}) => {
+const Jar = ({jarMethod}) => {
   const [showPopup, setButtonPopup] = useState(false);
   const [speechBubble, setSpeechbubble] = useState(false);
 
   const bubbleText = () => {
     return(
-      'Hmm, pointy...'
+      "That pointy tooth, take a closer look. If you ask me it looks like one of Tiffany's. Another letter, read it."
     )
-  }
+  };
 
   const ClickHandler = () => {
-    mirrorMethod(true);
+    jarMethod(true);
     setButtonPopup(true);
     setSpeechbubble(true);
   };
