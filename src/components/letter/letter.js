@@ -25,4 +25,4 @@ const Letter = (props) => {
   );
 }
 
-export default Letter
+export default Letter;
