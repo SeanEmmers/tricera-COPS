@@ -29,6 +29,7 @@ const LandingRoom = () => {
   const [noteFourAndMirror, setNoteFourAndMirror] = useState(false);
   const [showEnvelopeFive, setEnvelopeFive] = useState(false); 
   const [noteSixAndCurtain, setNoteSixAndCurtain] = useState(false);
+  const [showChalkOutline, setChalkOutline] = useState(false);
 
   return (
     <div className="LandingRoom">
@@ -45,8 +46,8 @@ const LandingRoom = () => {
         { noteFourAndMirror ? <Mirror mirrorMethod = {setEnvelopeFive}/> : null}
         { showEnvelopeFive ? <EnvelopeFive letterSix = {setNoteSixAndCurtain} /> : null }
         { noteSixAndCurtain ? <EnvelopeSix letterContent = {<LetterSixContent/>} /> : null }
-        { noteSixAndCurtain ? <Curtains/> : null }
-        { noteSixAndCurtain ? <ChalkOutline/> : null }
+        { noteSixAndCurtain ? <Curtains curtainMethod = {setChalkOutline} /> : null }
+        { showChalkOutline ? <ChalkOutline/> : null }
         { noteSixAndCurtain ? <Door /> : null }
         <DinoCop />
         <SpeechBubble />
