@@ -1,6 +1,6 @@
 import React from 'react'
 import './letter.css'
-import { Container, Row, Col, CloseButton, Button } from "react-bootstrap";
+import { Container, Row, Col, CloseButton } from "react-bootstrap";
 
 const Letter = (props) => {
   return props.displayingLetter ? (

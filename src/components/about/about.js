@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Button, Col, Row, Card, Img } from "react-bootstrap";
+import { Container, Button, Col, Row, Card } from "react-bootstrap";
 import "./about.css";
 import camilla from "./aboutImages/camilla.jpg";
 import Craig from "./aboutImages/Craig.jpg";

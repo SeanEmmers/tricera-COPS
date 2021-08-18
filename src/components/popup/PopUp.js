@@ -1,6 +1,6 @@
 import React from 'react'
 import './PopUp.css'
-import { Button, Container, Row, Col, CloseButton} from "react-bootstrap";
+import { Container, Row, Col, CloseButton} from "react-bootstrap";
 
 
 
