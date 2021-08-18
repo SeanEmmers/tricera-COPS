@@ -4,6 +4,7 @@ import Popup from "../popup/PopUp";
 import DoorGlow from "./door-images/DoorOrangeCropped.png";
 import DoorBasic from "./door-images/CroppedDoorFinal.png";
 import "./Door.css";
+import { Link } from 'react-router-dom'
 
 const Door = () => {
   const [showPopup, setButtonPopup] = useState(false);
@@ -22,7 +23,9 @@ const Door = () => {
         <div className="EndingText">
           <p> Congratulations, you caught the killer and saved Dinoville !! </p>
           <p> Thank you for playing! </p>
-          <button> Play again? </button>
+            <Link to = '/about'>
+            <button> About us :) </button>
+            </Link>
         </div>
       </Popup>
     </div>
