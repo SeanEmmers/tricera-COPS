@@ -36,7 +36,7 @@ const EnvelopeOne = ({letterTwo}) => {
 
   return(
     <div>
-      <img className="envelopeOutline" onClick={() => clickHandler()} src={EnvelopeBasic} alt="envelope" onMouseOver={e => e.currentTarget.src = EnvelopeGlow } onMouseOut={e => e.currentTarget.src = EnvelopeBasic }/>
+      <img className="envelopeOutline" id="envelopeOne" onClick={() => clickHandler()} src={EnvelopeBasic} alt="envelope" onMouseOver={e => e.currentTarget.src = EnvelopeGlow } onMouseOut={e => e.currentTarget.src = EnvelopeBasic }/>
       <Letter displayingLetter={displayingLetter} showLetter={showLetter}>
         {letterContent()}
       </Letter>

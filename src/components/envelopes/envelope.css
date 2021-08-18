@@ -1,10 +1,43 @@
 .envelopeOutline{
-  height: 3%;
-  width: 4.5%;
+  height: 2%;
+  width: 4%;
   position: absolute;
-  top: 70%;
-  right: 65%;
-  transform: rotate(0deg) skewX(-50deg) skewY(0deg);
+  transform: skewX(-65deg) skewY(0deg);
   border: none;
   outline: transparent;
+}
+
+#envelopeOne{
+  top: 69%;
+  right: 68%;
+}
+
+#envelopeTwo{
+  top: 72%;
+  right: 68%;
+}
+
+#envelopeThree{
+  top: 69%;
+  right: 63%;
+}
+
+#envelopeFour{
+  top: 72%;
+  right: 63%;
+}
+
+#envelopeFive{
+  top: 69%;
+  right: 58%;
+}
+
+#envelopeSix{
+  top: 72%;
+  right: 58%;
+}
+
+#envelopeSeven{
+  top: 69%;
+  right: 53%;
 }
