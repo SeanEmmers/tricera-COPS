@@ -16,9 +16,10 @@
 }
 
 .chalkoutlineobject {
-  height: 30%;
-  width: 35%;
+  height: 25.5%;
+  width: 44%;
   position: absolute;
-  bottom: 1%;
-  right: 45%;
+  bottom: 4.85%;
+  right: 37.8%;
+  transform: rotate(0.59deg);
 }
