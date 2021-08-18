@@ -21,6 +21,7 @@ const Door = () => {
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div className="EndingText">
           <p> Congratulations, you caught the killer and saved Dinoville !! </p>
+          <p> Thank you for playing! </p>
           <button> Play again? </button>
         </div>
       </Popup>
