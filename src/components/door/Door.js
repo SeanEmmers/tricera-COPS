@@ -5,7 +5,7 @@ import DoorGlow from "./door-images/DoorOrangeCropped.png";
 import DoorBasic from "./door-images/CroppedDoorFinal.png";
 import "./Door.css";
 import { Link } from 'react-router-dom'
-import { Button, CloseButton } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 const Door = () => {
   const [showPopup, setButtonPopup] = useState(false);

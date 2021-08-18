@@ -2,9 +2,8 @@ import React from "react";
 import "./App.css";
 import LandingRoom from "./components/landing-room/LandingRoom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import {Navbar} from "react-bootstrap";
 import {Navbar,Container} from "react-bootstrap";
-import {Route, Link} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import Home from "./components/homepage/home.js"
 import About from "./components/about/about.js"
 import Hat from "./components/homepage/HomeImage/TheHatfull.png"
@@ -12,14 +11,6 @@ import Hat from "./components/homepage/HomeImage/TheHatfull.png"
 
 function App() {
  
-  const [data, setData] = React.useState(null);
-
-  // React.useEffect(() => {
-  //   fetch("/api")
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data.message));
-  // }, []);
-
   return (
     <div className="App">
       <Navbar class="navbar" variant="dark">

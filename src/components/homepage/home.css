@@ -12,8 +12,6 @@ a:link {
 }
 
 .welcome {
-  /* height: 80%;
-  width: 100%; */
-   width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
