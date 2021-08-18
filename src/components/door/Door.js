@@ -25,7 +25,7 @@ const Door = () => {
           <p> Congratulations, you caught the killer and saved Dinoville !! </p>
           <p> Thank you for playing! </p>
             <Link to = '/about'>
-            <Button> About us :) </Button>
+              <Button> About us :) </Button>
             </Link>
         </div>
       </LosingPopup>
