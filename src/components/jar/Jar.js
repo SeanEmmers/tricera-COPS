@@ -4,7 +4,6 @@ import Popup from "../popup/PopUp";
 import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 import JarGlow from "./jar-images/JarCroppedFinal.png";
 import JarBasic from "./jar-images/CroppedJarFinal.png";
-import Letter from "../letter/Letter";
 import "./Jar.css";
 
 const Jar = ({jarMethod}) => {
