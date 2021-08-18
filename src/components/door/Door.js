@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react';
-import Popup from "../popup/PopUp";
+import LosingPopup from "../popup/LosingPopUp";
 import DoorGlow from "./door-images/DoorOrangeCropped.png";
 import DoorBasic from "./door-images/CroppedDoorFinal.png";
 import "./Door.css";
@@ -19,7 +19,7 @@ const Door = () => {
         onMouseOut={(e) => (e.currentTarget.src = DoorBasic)}
         alt="OrangeDoor"
       />
-      <Popup show={showPopup} setShow={setButtonPopup}>
+      <LosingPopup show={showPopup} setShow={setButtonPopup}>
         <div className="EndingText">
           <p> Congratulations, you caught the killer and saved Dinoville !! </p>
           <p> Thank you for playing! </p>
@@ -27,7 +27,7 @@ const Door = () => {
             <button> About us :) </button>
             </Link>
         </div>
-      </Popup>
+      </LosingPopup>
     </div>
   );
 }
