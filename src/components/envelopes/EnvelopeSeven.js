@@ -2,8 +2,8 @@ import EnvelopeBasic from "./envelope-images/Envelope.png";
 import EnvelopeGlow from "./envelope-images/EnvelopeGlow.png";
 import React from "react";
 import { useState } from 'react';
-import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 import Letter from "../letter/Letter";
+import SpeechBubbleReuse from "../speech-bubble/SpeechBubbleReuse";
 import "./envelope.css";
 
 const EnvelopeSeven = ({showOutline}) => {
