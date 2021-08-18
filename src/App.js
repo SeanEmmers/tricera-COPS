@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar fixed="top" class="navbar" variant="dark">
+      <Navbar class="navbar" variant="dark">
         <Container>
           <Navbar.Brand href="/">
             <img              
@@ -37,8 +37,6 @@ function App() {
           </Navbar.Text>
         </Container>
       </Navbar>
-      <br />
-      <br />
       <Container>
         <Route exact path="/" component={Home} />
         <Route exact path="/play" component={LandingRoom} />
