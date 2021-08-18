@@ -11,12 +11,17 @@ const Andy = () => {
     setButtonPopup(true);
   }
 
+  const startOver = () => {
+    window.location.reload(false);
+  }
+
   return (
     <div>
       <img className="andy" src={AndyImg} alt="Andy" onClick = {() => clickHandler()}/>
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>You were wrong, the real killer got away !! </p>
+          <button onClick = {() => startOver()}> Start again? </button>
         </div>
       </Popup>
     </div>

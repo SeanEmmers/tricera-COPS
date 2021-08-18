@@ -11,6 +11,9 @@ const Tiffany = () => {
     setButtonPopup(true);
   }
 
+  const startOver = () => {
+    window.location.reload(false);
+  }
 
   return (
     <div>
@@ -18,6 +21,7 @@ const Tiffany = () => {
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>You were wrong, the real killer got away !! </p>
+          <button onClick = {() => startOver()}> Start again? </button>
         </div>
       </Popup>
     </div>
