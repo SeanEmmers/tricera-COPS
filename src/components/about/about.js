@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Button, Col, Row, Card } from "react-bootstrap";
 import "./about.css";
-import camilla from "./aboutImages/camilla.jpg";
+import camilla from "./aboutImages/Camilla.jpg";
 import Craig from "./aboutImages/Craig.png";
 import Mas from "./aboutImages/Mas.png";
 import Sean from "./aboutImages/Sean.png";

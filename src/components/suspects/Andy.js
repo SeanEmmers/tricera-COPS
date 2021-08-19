@@ -3,6 +3,7 @@ import AndyImg from "./images/Andy.png";
 import "./suspects.css";
 import LosingPopup from "../popup/LosingPopUp";
 import { useState } from 'react';
+import { Button } from "react-bootstrap";
 
 const Andy = () => {
   const [showPopup, setButtonPopup] = useState(false);
@@ -21,7 +22,7 @@ const Andy = () => {
       <LosingPopup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>You were wrong, the real killer got away !! </p>
-          <button onClick = {() => startOver()}> Start again? </button>
+          <Button onClick = {() => startOver()}> Start again? </Button>
         </div>
       </LosingPopup>
     </div>

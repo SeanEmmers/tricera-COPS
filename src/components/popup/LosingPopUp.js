@@ -4,7 +4,7 @@ import { Container, Row } from "react-bootstrap";
 
 const LoosingPopup = (display) => {
   return display.show ? (
-    <div className="popup">
+    <div className="losing-popup">
       <Container>
         <Row>
             <div className="popup-inner">
