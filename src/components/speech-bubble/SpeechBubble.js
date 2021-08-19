@@ -7,6 +7,12 @@ const SpeechBubble = () => {
 
   const [ text, setText ] = useState('Hello I am Tricera-cop')
   const [ show, showText ] = useState(true)
+  const [showingButton, buttonVisible] = useState(true)
+
+  const nextClick = () => {
+    setText("We are locked in here, I need your help to escape and catch the killer!");
+    buttonVisible(false);
+  };
 
   return (
     <div className = {show ? 'bubble' : 'close-bubble'}>
@@ -14,11 +20,13 @@ const SpeechBubble = () => {
       <br />
       <div className="pointer"></div>
       <CloseButton className="close-btn" size="sm" onClick={() => showText(false)} ></CloseButton>
-      <div className="small-btn">
-        <Button size="sm" variant="outline-secondary" onClick={() => setText("We are locked in here, I need your help to escape and catch the killer!") }>
-          Next...
-        </Button>
-      </div>
+      { showingButton ?     
+        <div className="small-btn">
+          <Button size="sm" variant="outline-secondary" onClick={() => nextClick()}>
+            Next...
+          </Button>
+        </div> : null
+      }
     </div>
   );
 }
