@@ -1,6 +1,6 @@
 # Tricera-COP 
 
-![dinocops](src/components/homepage/HomeImage/Home_Page_Githug.png)
+![dinocops](https://github.com/SeanEmmers/tricera-cops/blob/main/src/components/homepage/HomeImage/Home_Page_githug.png)
 
 ## Description
 
