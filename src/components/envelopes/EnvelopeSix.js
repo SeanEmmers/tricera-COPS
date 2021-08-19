@@ -19,10 +19,11 @@ const EnvelopeSix = ({showCurtains}) => {
   const letterContent = () => {
     return(
       <div>
-      <p>I know you took that money from my business</p>
-      <p>I won't stand for this,</p>
-      <p>I will come and get it from you myself tonight if I have too. </p>
-      <p>P</p>
+      <p>Dearest Priya,</p>
+      <p>They say when it rains, it pours. And I want to pour my heart open to you. My love for you could dwarf even a brachiosaurus. My desire to be around you is more voracious than the apetite of a tyrannosaur. Alas, I feel that my love goes unrequited. When oh when will you see that I am the only dinosaur for you.</p>
+      <p>That brute Andy will never treat you as well as I could. Whatever happened to when they would call us childhood sweethearts? Do you still admire my poetry like you did then? We should give up the big city and run away together.</p>
+      <p>Best wishes my love,</p>
+      <p>Your greatest admirer</p>
     </div>
     );
   }
