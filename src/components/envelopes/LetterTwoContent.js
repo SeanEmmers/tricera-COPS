@@ -5,8 +5,8 @@ const LetterTwoContent = () => {
   return(
     <div>
       <p>Dear Diary,</p>
-      <p>Tiffany smells</p>
-      <p>Want divorse</p>
+      <p>I hate Tiffany</p>
+      <p>Want a divorse</p>
       <p>Andy</p>
     </div>
   );

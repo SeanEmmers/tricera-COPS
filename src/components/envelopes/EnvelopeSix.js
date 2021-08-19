@@ -19,10 +19,10 @@ const EnvelopeSix = ({showCurtains}) => {
   const letterContent = () => {
     return(
       <div>
-      <p>Hello sexy dinoboy,</p>
-      <p>I love your hat</p>
-      <p>pls cum and put me in cuffs ;) </p>
-      <p>Priya xoxox</p>
+      <p>Hello my love Priya</p>
+      <p>I miss you more than anything</p>
+      <p>I will see you soon </p>
+      <p>D</p>
     </div>
     );
   }

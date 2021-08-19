@@ -18,7 +18,7 @@ const Curtains = ({curtainMethod}) => {
 
   const bubbleText = () => {
     return(
-      'Hmm interesting, it looks like someone tried to climb out. You also discovered on more letter. Read it'
+      'Hmm interesting, it looks like someone tried to climb in. You also discovered on more letter. Read it'
     )
   }
 
@@ -31,7 +31,7 @@ const Curtains = ({curtainMethod}) => {
       />
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>Behind the curtain you discover some footprints, was someone trying to climb in? OR OUT ??</p>
+          <p>Behind the curtain you discover some footprints, was someone trying to climb in or out??</p>
         </div>
       </Popup>
       <div>

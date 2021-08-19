@@ -19,7 +19,7 @@ const DinoSuspect = (props) => {
 
   const bubbleText = () => {
     return(
-      "Argghhh! I can't believe you caught me RAAWWWWRRR 🦖"
+      "Argghhh! I can't believe you caught me RAAWWWWRRR"
     )
   }
 

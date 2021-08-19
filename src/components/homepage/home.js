@@ -19,7 +19,7 @@ const Home = () => {
               <br />
               <div className="playButton">
                 <Button variant="danger" size="lg">
-                  Let's Play, Bitch!!
+                  Let's Play!!
                 </Button>
               </div>
             </Link>
