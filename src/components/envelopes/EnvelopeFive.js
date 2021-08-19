@@ -12,7 +12,7 @@ const EnvelopeFive = ({letterSix}) => {
 
   const bubbleText = () => {
     return(
-      "Priya told me that Andy had always been insecure about her having a life outside their relationship. It looks like there is one more letter..."
+      "Priya told me that Andy had always been insecure about her having a life outside their relationship. It looks like there was another letter, on the mantelpiece. Let's check it out."
     )
   }
 
@@ -20,10 +20,10 @@ const EnvelopeFive = ({letterSix}) => {
     return(
       <div>
         <p>Dear Tiffany,</p>
-        <p>Priya was being distant again last night,</p>
-        <p>I have a suspicion that she is cheating on me</p>
-        <p>Last night I followed her to that bar where all the cops hang out</p>
-        <p>She always liked a man in uniform</p>
+        <p>Priya was being distant again last night, I have a suspicion that she is cheating on me. A lot of things would make sense if she is.</p>
+        <p>Last night I followed her to that bar where all the cops hang out. She always liked a man in uniform.</p>
+        <p>I will let you know what else I discover.</p>
+        <p>Yours cretaceously,</p>
         <p>Andy</p>
       </div>
     );
