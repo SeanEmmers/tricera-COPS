@@ -3,6 +3,7 @@ import { useState } from 'react';
 import TiffanyImg from "./images/Tiffany.png";
 import LosingPopup from "../popup/LosingPopUp";
 import "./suspects.css";
+import { Button } from "react-bootstrap";
 
 const Tiffany = () => {
   const [showPopup, setButtonPopup] = useState(false);
@@ -21,7 +22,7 @@ const Tiffany = () => {
       <LosingPopup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>You were wrong, the real killer got away !! </p>
-          <button onClick = {() => startOver()}> Start again? </button>
+          <Button onClick = {() => startOver()}> Start again? </Button>
         </div>
       </LosingPopup>
     </div>
