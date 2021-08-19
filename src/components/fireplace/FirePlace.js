@@ -12,7 +12,7 @@ const Fireplace = ({fireplaceMethod}) => {
 
   const bubbleText = () => {
     return(
-      "Hmm, that clue seems useless, dinosaurs are always losing their horns. I wonder what that note says."
+      "Someone was trying to get rid of that letter, what were they trying to hide? Let's check what it says."
     )
   }
 
