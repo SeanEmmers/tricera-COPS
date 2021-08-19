@@ -31,7 +31,7 @@ const Fireplace = ({fireplaceMethod}) => {
       />
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>Inside the dusty fireplace you find a broken 'tooth'</p>
+          <p>Inside the dusty fireplace you find a broken horn</p>
         </div>
       </Popup>
       <div>

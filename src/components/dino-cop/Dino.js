@@ -9,7 +9,7 @@ const DinoCop = () => {
 
   const bubbleText = () => {
     return(
-      "Hey, don't poke me bitch"
+      "Hey, don't poke me"
     )
   }
 

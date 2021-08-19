@@ -12,7 +12,7 @@ const EnvelopeThree = ({letterFour}) => {
 
   const bubbleText = () => {
     return(
-      "Me and Priya are buds, I don't trust Tiffany, she eats vegetables. Hey look, another letter."
+      "Me and Priya are good friends, I don't trust Tiffany, she is a violent flesh eater! Hey look, another letter."
     )
   }
 
