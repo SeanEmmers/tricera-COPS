@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Container, Button, Col, Row, Card } from "react-bootstrap";
 import "./about.css";
 import camilla from "./aboutImages/camilla.jpg";
-import Craig from "./aboutImages/Craig.jpg";
-import Mas from "./aboutImages/Mas.jpg";
-import Sean from "./aboutImages/Sean.jpg";
+import Craig from "./aboutImages/Craig.png";
+import Mas from "./aboutImages/Mas.png";
+import Sean from "./aboutImages/Sean.png";
 import JooMin from "./aboutImages/JooMin.jpg";
-import Theo from "./aboutImages/Theo.jpg";
+import Tarun from "./aboutImages/Tarun.png";
 // import Poster from "./HomeImage/Home_Page.png";
 
 const About = () => {
@@ -65,8 +64,7 @@ const About = () => {
               <Card.Body>
                 <Card.Title>JooMin</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Rawr
                 </Card.Text>
                 <Button
                   variant="primary"
@@ -123,12 +121,11 @@ const About = () => {
             <br />
             <br />
             <Card className="cards">
-              <Card.Img variant="top" src={Theo} />
+              <Card.Img variant="top" src={Tarun} />
               <Card.Body>
                 <Card.Title>Tarun (Theo Weisz)</Card.Title>
                 <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  
                 </Card.Text>
                 <Button
                   variant="primary"

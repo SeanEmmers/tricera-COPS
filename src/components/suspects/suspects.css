@@ -3,8 +3,8 @@
   width: 30%;
   position: absolute;
   top: 37%;
-  left: 5%;
-  z-index: 2500;
+  left: 40%;
+  z-index: 1500;
 }
 
 .tiffany {
@@ -12,6 +12,6 @@
   width: 30%;
   position: absolute;
   top: 37%;
-  left: 35%;
-  z-index: 2500;
+  left: 5%;
+  z-index: 1500;
 }

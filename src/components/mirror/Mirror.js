@@ -18,7 +18,7 @@ const Mirror = ({mirrorMethod}) => {
 
   const bubbleText = () => {
     return(
-      "Hmm, it looks like ther was also another note hidden behind the mirror there..."
+      "Have these guys not heard of Dino-mail?"
     )
   }
 
@@ -28,7 +28,7 @@ const Mirror = ({mirrorMethod}) => {
       <img className="mirrorOutline" onClick={() => mirrorClick()} src={MirrorBasic} alt="Mirror" onMouseOver={e => e.currentTarget.src = MirrorGlow } onMouseOut={e => e.currentTarget.src = MirrorBasic }/>
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>As you move the frame of the mirror some broken you notice some small shards of glass on the mantelpiece, it looks like it has been replaced recently...</p>
+          <p>As you move the frame of the mirror you notice that the frame has been replaced and moved recently. A small envelope falls out from behind the mirror.</p>
         </div>
       </Popup>
       <div>
