@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const SpeechBubble = () => {
 
-  const [ text, setText ] = useState("You must be the chief detective. Where have you been, we don't have much time. No time to answer. Let me introduce myself. I'm Triceracop, the officer in charge of this crime scene. The husband of the victim, Andy, reported the murder at 1am last night. He said he heard loud shouting, followed by a scream. When he entered the room there was no-one there except for his wife Priya, lying dead on the floor.");
+  const [ text, setText ] = useState("You must be the chief detective. Where have you been, we don't have much time. No time to answer. Let me introduce myself. I'm Triceracop, the officer in charge of this crime scene. The husband of the victim, Andy, reported the murder at 1am last night. He said he heard loud shouting, followed by a scream. When he entered the room there was no-one there except for his wife Priya, lying dead on the floor...");
   const [ show, showText ] = useState(true)
   const [showingButton, buttonVisible] = useState(true)
 
@@ -23,7 +23,7 @@ const SpeechBubble = () => {
       { showingButton ?     
         <div className="small-btn">
           <Button size="sm" variant="outline-secondary" onClick={() => nextClick()}>
-            Next...
+            Next
           </Button>
         </div> : null
       }
