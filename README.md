@@ -8,11 +8,13 @@ Our project is a Dino-Murder Mystery Single Player Game built using React & Reac
 
 ## How to Install & Use the Project
 
-1. Run git clone
-3. Run npm install
-3. To start the game, run npm start
+1. Git clone this repository
+2. Open the directory in your text editor
+3. Run npm install in the terminal to install the dependencies
+4. To start the game, run npm start
+5. visit http://localhost:3000/
 
-Or you can play the game [here](https://tricera-cops.herokuapp.com/)
+The game is also published to Heroku, you can play it [here](https://tricera-cops.herokuapp.com/)
 
 ## What Technologies did We Use?
 
