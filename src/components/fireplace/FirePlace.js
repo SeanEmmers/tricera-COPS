@@ -12,7 +12,7 @@ const Fireplace = ({fireplaceMethod}) => {
 
   const bubbleText = () => {
     return(
-      "Hey look, a letter has appeared"
+      "Hmm, that clue seems useless, dinosaurs are always losing their horns. I wonder what that note says."
     )
   }
 
@@ -31,7 +31,7 @@ const Fireplace = ({fireplaceMethod}) => {
       />
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>Inside the dusty fireplace you find a broken horn</p>
+          <p>Upon searching the dusty fireplace, you spot a broken horn and a half burnt note. Mouse over the horn in your inventory and click on the letter to take a closer look. </p>
         </div>
       </Popup>
       <div>

@@ -12,7 +12,7 @@ const EnvelopeSeven = ({showOutline}) => {
 
   const bubbleText = () => {
     return(
-      'then it is time to decide who the killer is, I think it is clear!'
+      'We have enough evidence. Inspect the chalk outline when you are ready to make your decision, I think it is clear! Cuff them detective!'
     )
   }
 
@@ -25,10 +25,12 @@ const EnvelopeSeven = ({showOutline}) => {
   const letterContent = () => {
     return(
       <div>
-        <p>Dear Andy,</p>
-        <p>I am worried about Priya</p>
-        <p>She is rambling about her life being controlled by six naked monkey</p>
-        <p>I think she needs to lay off the dino sauce</p>
+        <p>Andy,</p>
+        <p>I am furious with Priya</p>
+        <p>She claims the money had been stolen but I don't believe her</p>
+        <p>There was a robbery but she was there, alone...</p>
+        <p>The police took her statement but they couldn't find any evidence of a break in</p>
+        <p>It must have been an inside job!</p>
         <p>Tiffany</p>
       </div>
     );

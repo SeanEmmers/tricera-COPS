@@ -1,7 +1,5 @@
 .letter {
   position: absolute;
-  z-index: 1001;
-
   top: 0;
   left: 0;
   width: 100%;
@@ -15,6 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3000;
 }
 
 .letter-inner {
@@ -27,6 +26,7 @@
   font-weight: 525;
   background-color: #f2eecb;
   border-radius: 1em;
+  z-index: 3000;
 }
 
 .close-btn {

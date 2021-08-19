@@ -5,9 +5,10 @@ const LetterTwoContent = () => {
   return(
     <div>
       <p>Dear Diary,</p>
-      <p>I hate Tiffany</p>
-      <p>Want a divorse</p>
-      <p>Andy</p>
+      <p>I don't know how much longer I can last in this relationship</p>
+      <p>Priya is driving me up the wall</p>
+      <p>I feel like I am trapped and can't get out!</p>
+      <p>A</p>
     </div>
   );
 };

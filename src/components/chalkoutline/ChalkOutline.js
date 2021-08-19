@@ -23,7 +23,7 @@ const ChalkOutline = (props) => {
       />
        <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>It is time to decide who you think killed Priya, click on your choice.</p>
+          <p>Decide who you think the killer is. Click on your choice.</p>
         </div>
       </Popup>
     </div>

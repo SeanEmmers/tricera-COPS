@@ -12,7 +12,7 @@ const EnvelopeFour = (props) => {
 
   const bubbleText = () => {
     return(
-      "It seems like Tiffany and Priya were arguing about money, I knew not to trust that cabbage muncher! We should search for more clues"
+      "It seems like Tiffany and Priya were arguing about dino-bucks, was someone hiding money from the other? That could be a serious motive. We should search for more clues"
     )
   }
 
