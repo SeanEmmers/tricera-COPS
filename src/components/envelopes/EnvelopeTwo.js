@@ -12,7 +12,7 @@ const EnvelopeTwo = (props) => {
 
   const bubbleText = () => {
     return(
-      "Very interesting, we should check elsewhere in the room."
+      "It looks like Andy and Priya's relationship has not been going well, perhaps he finally snapped? Let's search for more clues"
     )
   }
 

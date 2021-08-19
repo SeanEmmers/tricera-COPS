@@ -12,7 +12,7 @@ const EnvelopeThree = ({letterFour}) => {
 
   const bubbleText = () => {
     return(
-      "Me and Priya are good friends, I don't trust Tiffany, she is a violent flesh eater! Hey look, another letter."
+      "Priya and I are good friends. I don't trust Tiffany, she is a violent flesh eater! It seems there was another letter under the vase. Priya sure was organised..."
     )
   }
 
@@ -20,8 +20,9 @@ const EnvelopeThree = ({letterFour}) => {
     return(
       <div>
         <p>Dear Tricera-cop,</p>
-        <p>You are the only one I can trust</p>
-        <p>pls help,</p>
+        <p>Tiffany has been acting strange recently</p>
+        <p>I am beginning to fear for my well being</p>
+        <p>Please keep this to yourself, you are the only one I can trust</p>
         <p>Priya</p>
       </div>
     );

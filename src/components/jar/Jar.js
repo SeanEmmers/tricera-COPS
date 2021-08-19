@@ -12,7 +12,7 @@ const Jar = ({jarMethod}) => {
 
   const bubbleText = () => {
     return(
-      "That pointy tooth, take a closer look. If you ask me it looks like one of Tiffany's. Another letter, read it."
+      "A pointy tooth, take a closer look. It looks like a T-rex tooth, could it be Tiffany's? There was another letter stuffed in the vase too, let's read it!"
     )
   };
 
@@ -27,9 +27,9 @@ const Jar = ({jarMethod}) => {
       <img className="jarOutline" onClick={() => ClickHandler()} src={JarBasic} alt="Jar" onMouseOver={e => e.currentTarget.src = JarGlow } onMouseOut={e => e.currentTarget.src = JarBasic }/>
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor.
           <p>
-          </p>Curious? Check you inventory!</p>
+            You notice a golden vase on the mantelpiece. Upon closer inspection, it seems that there is something inside. You shake it out and a blood-stained tooth falls on the floor.
+          </p>
         </div>
       </Popup>
       <SpeechBubbleReuse display={speechBubble} showBubble={setSpeechbubble} words={bubbleText}>
