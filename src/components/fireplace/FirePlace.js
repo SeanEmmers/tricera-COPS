@@ -32,7 +32,7 @@ const Fireplace = ({fireplaceMethod}) => {
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
           <p>Upon searching the dusky fireplace, you spot a broken fragment that resembles a tooth, as well as a half-burnt note. </p>
-          <p className="fireplaceinstruction" >mouse over the horn in your inventory, then click on the letter to take a closer look</p>
+          <p className="gameinstruction" >mouse over the horn in your inventory, then click on the letter to take a closer look</p>
         </div>
       </Popup>
       <div>

@@ -125,7 +125,8 @@ const About = () => {
               <Card.Body>
                 <Card.Title>Tarun (Theo Weisz)</Card.Title>
                 <Card.Text>
-                  
+                <p>“People say nothing is impossible, but I do nothing every day.”</p> 
+                <p>–⁠ Winnie the Pooh</p>
                 </Card.Text>
                 <Button
                   variant="primary"
