@@ -12,7 +12,7 @@ const EnvelopeTwo = (props) => {
 
   const bubbleText = () => {
     return(
-      "It looks like Andy and Priya's relationship has not been going well, perhaps he finally snapped? Let's search for more clues"
+      "It looks like Andy and Priya's relationship has not been going well, perhaps he finally snapped? Let's search for more clues."
     )
   }
 

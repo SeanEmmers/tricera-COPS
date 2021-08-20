@@ -22,10 +22,10 @@ const Door = () => {
       />
       <LosingPopup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p> Congratulations, you caught the killer and saved Dinoville !! </p>
+          <p> Thanks to you Dinoville is safe, for now... </p>
           <p> Thank you for playing! </p>
             <Link to = '/about'>
-              <Button className = 'end-button'> About us 🦖</Button>
+              <Button> About the creators �</Button>
             </Link>
         </div>
       </LosingPopup>

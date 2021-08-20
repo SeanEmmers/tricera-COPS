@@ -12,7 +12,7 @@ const EnvelopeSeven = ({showOutline}) => {
 
   const bubbleText = () => {
     return(
-      'We have enough evidence. Inspect the chalk outline when you are ready to make your decision, I think it is clear! Cuff them detective!'
+      "We have enough evidence. Inspect the chalk outline when you are ready to make your decision. I think it's clear who the murderer is. Time to prove your reputation, detective!"
     )
   }
 
@@ -25,12 +25,13 @@ const EnvelopeSeven = ({showOutline}) => {
   const letterContent = () => {
     return(
       <div>
-        <p>Andy,</p>
-        <p>I am furious with Priya</p>
-        <p>She claims the money had been stolen but I don't believe her</p>
-        <p>There was a robbery but she was there, alone...</p>
-        <p>The police took her statement but they couldn't find any evidence of a break in</p>
-        <p>It must have been an inside job!</p>
+        <p>Dear Andy,</p>
+        <p>I am even more worried about Priya.</p>
+        <p>She had another episode at work today.</p>
+        <p>She was convinced that we are all merely a figment of the imaginations of six hyper-intelligent apes from a reality where dinosaurs went extinct 66 million years after an asteriod hit the planet.</p>
+        <p>She claimed the apes had developed an advanced society, similar to our own. Can you even imagine? Even the thought of a primate wearing clothes is laughable. Something you'd only ever see on the internet.</p>
+        <p>I hope her health improves, I am here to support both of you. If you need anything, I'm just a phone call away.</p>
+        <p>Yours triassicly,</p>
         <p>Tiffany</p>
       </div>
     );

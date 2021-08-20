@@ -12,7 +12,7 @@ const Jar = ({jarMethod}) => {
 
   const bubbleText = () => {
     return(
-      "A pointy tooth, take a closer look. It looks like a T-rex tooth, could it be Tiffany's? There was another letter stuffed in the vase too, let's read it!"
+      "A pointy tooth, let's take a closer look. It looks like a T-rex tooth, it must be Tiffany's, which other carnivore's could it be?! There was another letter stuffed in the vase too, let's read it!"
     )
   };
 

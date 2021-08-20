@@ -19,7 +19,7 @@ const DinoSuspect = (props) => {
 
   const bubbleText = () => {
     return(
-      "Argghhh! I can't believe you caught me RAAWWWWRRR"
+      "Argghhh! I can't believe you caught me! RAAWWWWRRR"
     )
   }
 
@@ -28,7 +28,8 @@ const DinoSuspect = (props) => {
       <img className="cop-suspect" src={DinoImg} alt="Dino-cop" onClick = {() => clickHandler()} />
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>Congratulations, you caught the killer and recieved a key !! </p>
+          <p>Congratulations! You solved the case and exposed the real killer. You are presented with the key to the city for your dedication to justice.</p>
+          <p className="gameinstruction" >When you are ready, click on the door to finish the game.</p>
         </div>
       </Popup>
       <SpeechBubbleReuse display={speechBubble} showBubble={setSpeechbubble} words={bubbleText}>

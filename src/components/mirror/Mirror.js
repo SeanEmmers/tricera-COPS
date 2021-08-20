@@ -28,7 +28,7 @@ const Mirror = ({mirrorMethod}) => {
       <img className="mirrorOutline" onClick={() => mirrorClick()} src={MirrorBasic} alt="Mirror" onMouseOver={e => e.currentTarget.src = MirrorGlow } onMouseOut={e => e.currentTarget.src = MirrorBasic }/>
       <Popup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>As you move the frame of the mirror you notice that the frame has been replaced and moved recently. A small envelope falls out from behind the mirror.</p>
+          <p>As you closely inspect the mirror, you notice something odd. The frame is clearly antique but the glass has been very recently replaced. There are also small fragments of glass on the mantelpiece. Was someone trying to hide something? A small envelope falls out from behind the mirror.</p>
         </div>
       </Popup>
       <div>

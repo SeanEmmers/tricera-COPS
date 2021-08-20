@@ -12,7 +12,7 @@ const EnvelopeOne = ({letterTwo}) => {
 
   const bubbleText = () => {
     return(
-      "Hmm interesting, we have another letter here, lets see if we can gather more infomation..."
+      "Hmm interesting, a letter from one of our prime suspects to the other, concerning the murder victim. Makes you wonder. Andy was the husband of Priya, and Tiffany was her business partner. Only their DNA has been found at the crimescene so we presume it must have been one of the two of them. Here's another letter from Andy we found earlier."
     )
   }
 

@@ -21,7 +21,7 @@ const Andy = () => {
       <img className="andy" src={AndyImg} alt="Andy" onClick = {() => clickHandler()}/>
       <LosingPopup show={showPopup} setShow={setButtonPopup}>
         <div>
-          <p>You were wrong, the real killer got away !! </p>
+          <p>You were wrong, the real killer got away! </p>
           <Button onClick = {() => startOver()}> Start again? </Button>
         </div>
       </LosingPopup>
