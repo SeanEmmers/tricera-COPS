@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   z-index: 3000; 
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .losing-popup {
@@ -34,9 +35,9 @@
   height: 40%;
   right: 16px;
   text-align: center;
-  background-color: white;
   z-index: 3000;
   border-radius: 25px;
+  background-color: white;
 }
 
 .close-btn {
