@@ -21,11 +21,11 @@ const Door = () => {
         alt="OrangeDoor"
       />
       <LosingPopup show={showPopup} setShow={setButtonPopup}>
-        <div className="EndingText">
+        <div>
           <p> Thanks to you Dinoville is safe, for now... </p>
           <p> Thank you for playing! </p>
             <Link to = '/about'>
-              <Button> About the creators </Button>
+              <Button> About the creators �</Button>
             </Link>
         </div>
       </LosingPopup>

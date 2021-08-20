@@ -13,7 +13,7 @@ function App() {
  
   return (
     <div className="App">
-      <Navbar class="navbar" variant="dark">
+      <Navbar className="navbar" variant="dark">
         <Container>
           <Navbar.Brand href="/">
             <img

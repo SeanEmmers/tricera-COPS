@@ -7,3 +7,9 @@
   border: none;
   outline: transparent;
 }
+
+
+.end-button {
+  background-color: white;
+  color: white;
+}
