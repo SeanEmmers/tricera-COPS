@@ -20,7 +20,7 @@ const EnvelopeThree = ({letterFour}) => {
     return(
       <div>
         <p>Dear Triceracop,</p>
-        <p>Tiffany has been acting very strangely recently, in ten years of running this business together we've never had more than a minor argument but she's blown up at me twice in the last week. It seems like you she suspects me of something, or maybe is even trying to frame me for something. I found her riffling through my drawers yesterday, she said she was looking for old accounts but something seemed off.</p>
+        <p>Tiffany has been acting very strangely recently, in ten years of running this business together we've never had more than a minor argument but she's blown up at me twice in the last week. It seems like she suspects me of something, or maybe is even trying to frame me for something. I found her riffling through my drawers yesterday, she said she was looking for old accounts but something seemed off.</p>
         <p>I couldn't imagine Tiffany harming a fly but with all of this, I am beginning to fear for my own safety.</p>
         <p>Please keep this to yourself, with the rifts in marriage at the moment, you are the only one I feel I can really trust.</p>
         <p>Your dear friend,</p>
